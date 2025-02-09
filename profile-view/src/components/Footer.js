@@ -7,8 +7,8 @@ function Footer() {
     const link = linksData.find(link => link.name === "GitHub");
 
     return (
-        <div className="footer">
-            <p>{'Coded by: '}
+        <footer className="footer">
+            <p>&copy; 2025 
                 <a href={link ? link.url : '#'} 
                     target="_blank" 
                     rel="noopener noreferrer" 
@@ -20,8 +20,8 @@ function Footer() {
                         GitHub
                     </span>
                 </a>
-            </p>
-        </div>
+            . All rights reserved.</p>
+        </footer>
     )
 }
 
