@@ -15,7 +15,7 @@ function Main() {
         const interval = setInterval(() => {
             setClock(new Date());
             setBlink(prev => !prev);
-        }, 2000);
+        }, 1000);
         return () => clearInterval(interval);
     }, []);
 
@@ -34,18 +34,23 @@ function Main() {
         );
     };
 
+    const dateFormat = (date) => {
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+    };
+
     return (
         <div className="main-container">
-            <div className="clock">{timeFormat(clock)}</div>
+            <div className="clock" data-date={dateFormat(clock)}>{timeFormat(clock)}</div>
             <br />
             <div className="grid-container">
-                <div className="links">
                 {linksData.map((link, idx) => (
                     <button key={idx} onClick={() => openLink(link.url)}>
-                        {link.name}
+                        <img src={link.icon} alt={link.name} className="icon" />
                     </button>
                 ))}
-                </div>
             </div>
         </div>
     );

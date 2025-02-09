@@ -7,11 +7,8 @@ body, html {
 
 .main-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-    width: 100%;
 }
 
 .main-container button {
@@ -25,6 +22,8 @@ body, html {
     font-size: 16px;
     font-weight: bold;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    text-align: center;
 }
 
 .main-container button:hover {
@@ -37,12 +36,53 @@ body, html {
     transform: scale(0.95);
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 100px;
+.clock {
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 2.1px solid #ccc;
+    border-radius: 33px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.grid-item:nth-child(2) {
-    grid-row-start: 2;
+.clock::after {
+    content: attr(data-date);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #f0f0f0;
+    padding: 5px;
+    border: 1.2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.clock:hover::after {
+    opacity: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat((3, auto));
+    gap: 21px;
+    justify-items: center;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
