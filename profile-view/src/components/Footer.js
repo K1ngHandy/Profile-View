@@ -7,7 +7,7 @@ function Footer() {
             <p>Coded by:{" "}
                 <a href={ '' } className="tooltip">
                     K1ngHandy
-                    <span className="tooltiptext">{ '' }</span>
+                    <span className="tooltiptext">{ '🔗 GitHub' }</span>
                 </a>
             </p>
         </div>
