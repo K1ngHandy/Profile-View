@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../css/Header.css";
+import "../css/header.css";
 import logo from '../LightWatermark.png';
 
 function Header() {

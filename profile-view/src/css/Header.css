@@ -10,9 +10,9 @@
     content: "";
     display: block;
     width: 100%;
-    height: 30px;
+    height: 90px;
     background-color: #440044;
-    transform: skewY(-5deg);
+    transform: skewY(-3deg);
     position: absolute;
     bottom: -25px;
     left: 0;
@@ -25,7 +25,7 @@
 }
 
 .blink {
-    animation: blink 1s infinite;
+    animation: blink 1s steps(1, start) infinite;
 }
 
 @keyframes blink {
