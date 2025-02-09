@@ -36,14 +36,16 @@ function Main() {
 
     return (
         <div className="main-container">
+            <div className="clock">{timeFormat(clock)}</div>
+            <br />
             <div className="grid-container">
-                <div className="clock">{timeFormat(clock)}</div>
-                <br />
+                <div className="links">
                 {linksData.map((link, idx) => (
                     <button key={idx} onClick={() => openLink(link.url)}>
                         {link.name}
                     </button>
                 ))}
+                </div>
             </div>
         </div>
     );
