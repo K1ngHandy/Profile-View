@@ -45,13 +45,16 @@ function Main() {
         <div className="main-container">
             <div className="clock" data-date={dateFormat(clock)}>{timeFormat(clock)}</div>
             <br />
+            <hr className="divider" />
             <div className="grid-container">
                 {linksData.map((link, idx) => (
-                    <button key={idx} onClick={() => openLink(link.url)}>
-                        <img src={link.icon} alt={link.name} className="icon" />
+                    <button className="tooltip" key={idx} onClick={() => openLink(link.url)} title={link.name}>
+                        <img src={link.icon} alt={link.name} className="icons" />
+                        <span className="tooltiptext">{link.name}</span>
                     </button>
                 ))}
             </div>
+            <hr className="divider" />
         </div>
     );
 }

@@ -9,15 +9,13 @@ function Footer() {
     return (
         <div className="footer">
             <p>{'Coded by: '}
-                <a 
-                    href={ link ? link.url : '#' } 
+                <a href={link ? link.url : '#'} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="tooltip">
-                        
                         K1ngHandy
                     <span className="tooltiptext">{
-                            <img src={githubIcon} alt="GitHub" className="footer-icon" />
+                        <img src={githubIcon} alt="GitHub" className="icons" />
                         }
                         GitHub
                     </span>
