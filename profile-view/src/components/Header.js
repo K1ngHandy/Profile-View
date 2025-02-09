@@ -1,11 +1,12 @@
 import React from "react";
 import "../css/header.css";
+import logo from "../assets/LightWatermark.png"
 
 function Header() {
     return (
         <div className="header">
             <h1>K1ngHandy</h1>
-            <img src="/assets/DarkWatermark.png" className="App-logo" alt="logo" />
+            <img className="App-logo" src={logo} alt="logo" />
         </div>
     )
 }

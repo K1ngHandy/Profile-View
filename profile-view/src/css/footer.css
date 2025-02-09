@@ -19,6 +19,13 @@
     color: white;
 }
 
+.footer-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
 .tooltip {
     position: relative;
     display: inline-block;
