@@ -1,6 +1,6 @@
 .header {
     background-color: #440044;
-    color: lightslategray;
+    color: #fff;
     padding: 20px;
     position: relative;
     text-align: center;
@@ -22,6 +22,8 @@
 .clock {
     font-size: 2em;
     margin-top: 10px;
+    color: lightslategray;
+    font-weight: bold;
 }
 
 .blink {

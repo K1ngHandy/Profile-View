@@ -31,6 +31,7 @@ function Header() {
 
     return (
         <div className="header">
+            <h1>K1ngHandy</h1>
             <img src={logo} className="App-logo" alt="logo" />
             <div className="clock">{timeFormat(clock)}</div>
         </div>
