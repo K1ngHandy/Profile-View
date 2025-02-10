@@ -76,7 +76,7 @@ function Main() {
                         GitHub
                     </span>
                 </a>
-                &nbsp;&copy;2025. All rights reserved.
+                &nbsp;&copy; 2025. All rights reserved.
             </p>
         </div>
     );
