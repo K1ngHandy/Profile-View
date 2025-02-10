@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/main.css"
 import linksData from "../data/linksData";
+import logo from "../assets/LightWatermark.png"
 
 function Main() {
     const [clock, setClock] = useState(new Date());
@@ -43,9 +44,14 @@ function Main() {
 
     return (
         <div className="main-container">
-            <div className="clock" data-date={dateFormat(clock)}>{timeFormat(clock)}</div>
-            <br />
-            <hr className="divider" />
+            <img className="App-logo" src={logo} alt="logo" />
+            <div className="clock" data-date={dateFormat(clock)}>
+                <div className="tooltip">
+                    {timeFormat(clock)}
+                    <span className="tooltiptext">{dateFormat(clock)}</span>
+                </div>
+            </div>
+            <h2>Selectable Links:</h2>
             <div className="grid-container">
                 {linksData.map((link, idx) => (
                     <button className="tooltip" key={idx} onClick={() => openLink(link.url)} title={link.name}>

@@ -21,6 +21,10 @@ main {
     width: 100%;
 }
 
+h1 {
+    color: #440044;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -47,7 +51,7 @@ main {
 
 .main-container button:hover {
     background-color: #660066;
-    transform: scale(1.05);
+    transform: scale(1.2);
 }
 
 .main-container button:active {
@@ -57,27 +61,17 @@ main {
 
 .clock {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     padding: 10px;
     background-color: #f0f0f0;
-    border: 2.1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 33px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
 .clock::after {
-    content: attr(data-date);
-    position: absolute;
-    bottom: -45px;
-    left: 50%;
-    transform: translate(-50%);
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
+    content: none;
 }
 
 .clock:hover::after {
@@ -85,8 +79,8 @@ main {
 }
 
 .divider {
-    border: solid 0.12rem #330033;
-    background-color: #330033;
+    border: solid 0.12rem #440044;
+    background-color: darkslategray;
     border-radius: 33px;
     height: 1px;
     margin: 3px 0;
@@ -97,15 +91,15 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    gap: 21px;
+    gap: 12px;
+    padding: 10px;
     justify-items: center;
     align-items: center;
-    width: 100%;
 }
 
 .icons {
-    width: 16px;
-    height: 16px;
+    width: 27px;
+    height: 27px;
 }
 
 .links {

@@ -8,19 +8,19 @@ function Footer() {
 
     return (
         <footer className="footer">
-            <p>&copy; 2025 
+            <p>
                 <a href={link ? link.url : '#'} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="tooltip">
                         K1ngHandy
-                    <span className="tooltiptext">{
+                    <span className="tooltiptext">
                         <img src={githubIcon} alt="GitHub" className="icons" />
-                        }
                         GitHub
                     </span>
                 </a>
-            . All rights reserved.</p>
+                &nbsp;&copy;2025. All rights reserved.
+            </p>
         </footer>
     )
 }
