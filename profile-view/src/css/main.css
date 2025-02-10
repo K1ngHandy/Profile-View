@@ -4,7 +4,6 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
 body {
     display: flex;
     flex-direction: column;
@@ -26,14 +25,8 @@ h1 {
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    position: relative;
 }
-
 .main-container button {
     background-color: #440044;
     color: #fff;
@@ -48,32 +41,37 @@ h1 {
     min-width: 150px;
     text-align: center;
 }
-
 .main-container button:hover {
     background-color: #660066;
     transform: scale(1.2);
 }
-
 .main-container button:active {
     background-color: #330033;
     transform: scale(0.95);
+}
+.main-container a {
+    color: #440044;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-container a:hover {
+    font-weight: bolder;
 }
 
 .clock {
     font-size: 2em;
     margin-bottom: 5px;
-    padding: 10px;
+    padding: 18px;
     background-color: #f0f0f0;
     border: 2px solid #ccc;
     border-radius: 33px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-
 .clock::after {
     content: none;
 }
-
 .clock:hover::after {
     opacity: 1;
 }
@@ -83,7 +81,7 @@ h1 {
     background-color: darkslategray;
     border-radius: 33px;
     height: 1px;
-    margin: 3px 0;
+    margin: 3px auto;
     width: 81%;
 }
 
@@ -95,6 +93,21 @@ h1 {
     padding: 10px;
     justify-items: center;
     align-items: center;
+    position: relative;
+}
+.selectable-links {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    visibility: hidden;
+    transition: visibility 0.3s ease;
+}
+.grid-container + .selectable-links {
+    visibility: hidden;
+    color: initial;
+}
+.grid-container:hover + .selectable-links {
+    visibility: visible;
+    color: #440044;
 }
 
 .icons {
