@@ -21,7 +21,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.App {
+/* .App {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,4 +29,4 @@ code {
   width: 100% ;
   height: 100%;
   text-align: center;
-}
+} */
