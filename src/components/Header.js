@@ -3,9 +3,9 @@ import "../css/Header.css";
 
 function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <h1>K1ngHandy</h1>
-    </div>
+    </header>
   );
 }
 
