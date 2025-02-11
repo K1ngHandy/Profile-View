@@ -10,6 +10,7 @@ root.render(
   <React.StrictMode>
     {/* <SpeedInsights>
       <Analytics> */}
+    {console.log("Root")}
     <App />
     {/* </Analytics>
     </SpeedInsights> */}
