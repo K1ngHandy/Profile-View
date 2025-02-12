@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Main.css";
 import linksData from "../data/linksData.js";
-import logo from "../assets/images/DarkWatermark.png";
-import githubIcon from "../assets/images/github-mark-white.png";
+import logo from "../assets/images/LionCoinToken.png";
 
 function Main() {
   const [clock, setClock] = useState(new Date());
   const [blink, setBlink] = useState(true);
 
-  const link = linksData.find((link) => link.name === "GitHub");
+  const { icon: githubIcon, url: githubUrl } =
+    linksData.find((link) => link.name === "GitHub") || {};
 
   const openLink = (url) => {
     window.open(url, "_blank");
@@ -72,7 +72,7 @@ function Main() {
       <p>
         {"Coded by: "}
         <a
-          href={link ? link.url : "#"}
+          href={githubUrl || "#"}
           target="_blank"
           rel="noopener noreferrer"
           className="tooltip"
