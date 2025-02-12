@@ -2,6 +2,8 @@
   "name": "profile-view",
   "version": "0.1.0",
   "private": true,
+  "author": "K1ngHandy",
+  "license": "MIT",
   "dependencies": {
     "@vercel/speed-insights": "^1.2.0",
     "cra-template": "1.2.0",
