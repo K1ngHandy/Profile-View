@@ -4,7 +4,7 @@
   "private": true,
   "author": "K1ngHandy",
   "license": "MIT",
-  "homepage": "https://github.com/K1ngHandy/Profile-View.git",
+  // "homepage": "https://github.com/K1ngHandy/Profile-View.git",
   "dependencies": {
     "@vercel/speed-insights": "^1.2.0",
     "cra-template": "1.2.0",
