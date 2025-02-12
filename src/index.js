@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles/Index.css";
+import "./assets/styles/Index.css";
 import App from "./App.js";
 
 console.log("Root");
