@@ -1,6 +1,5 @@
 .header {
     background-color: #440044;
-    color: #fff;
     padding: 20px;
     position: relative;
     text-align: center;
@@ -24,23 +23,4 @@
 }
 .header p {
     color: lightsteelblue;
-}
-
-.clock {
-    font-size: 2em;
-    margin-top: 5px;
-    color: lightslategray;
-    font-weight: bold;
-}
-.blink {
-    animation: blink 1s steps(1, start) infinite;
-}
-
-@keyframes blink {
-    0%, 50% {
-        opacity: 1;
-    }
-    50.01%, 100% {
-        opacity: 0;
-    }
 }

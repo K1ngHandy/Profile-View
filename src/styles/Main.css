@@ -7,19 +7,12 @@ main {
     width: 100%;
 }
 
-h1 {
-    color: #440044;
-}
-p {
-    color: lightslategray;
-}
-
 .main-container {
     position: relative;
 }
 .main-container button {
     background-color: #440044;
-    color: #fff;
+    /* color: #fff; */
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -39,19 +32,10 @@ p {
     background-color: #330033;
     transform: scale(0.95);
 }
-.main-container a {
-    color: #440044;
-    text-decoration: none;
-    font-weight: bold;
-}
-.main-container a:hover {
-    font-weight: bolder;
-}
 
 .App-logo {
     height: 21vmin;
-    pointer-events: none;
-    animation: bounce 2s;
+    pointer-events: none;   
     margin-top: -24px;
 }
 
@@ -60,8 +44,10 @@ p {
     max-width: 63%;
     margin: 0 auto;
     padding: 18px;
+    color: lightslategray;
+    font-weight: bold;
     background-color: #f0f0f0;
-    border: 2px solid #ccc;
+    border: 2px solid #330033;
     border-radius: 33px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -71,6 +57,17 @@ p {
 }
 .clock:hover::after {
     opacity: 1;
+}
+.blink {
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%, 0.3% {
+        opacity: 1;
+    }
+    0.4%, 100% {
+        opacity: 0;
+    }
 }
 
 .grid-container {
