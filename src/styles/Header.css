@@ -22,6 +22,9 @@
 .header h1 {
     color: #fff;
 }
+.header p {
+    color: lightsteelblue;
+}
 
 .clock {
     font-size: 2em;

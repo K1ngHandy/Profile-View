@@ -53,9 +53,8 @@ function Main() {
           <span className="tooltiptext">{dateFormat(clock)}</span>
         </div>
       </div>
-
+      <br />
       <div className="grid-container">
-        <h2 className="selectable-links">Selectable Links:</h2>
         {linksData.map((link, idx) => (
           <button
             className="tooltip"
