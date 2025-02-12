@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Main.css";
+import "../assets/styles/Main.css";
 import linksData from "../data/linksData.js";
 import logo from "../assets/images/DarkWatermark.png";
 import githubIcon from "../assets/images/github-mark-white.png";
