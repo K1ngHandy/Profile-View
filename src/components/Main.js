@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "../css/Main.css";
-import linksData from "../data/linksData";
-import logo from "../assets/DarkWatermark.png";
-import githubIcon from "../assets/github-mark-white.png";
+import "../styles/Main.css";
+import linksData from "../data/linksData.js";
+import logo from "../assets/images/DarkWatermark.png";
+import githubIcon from "../assets/images/github-mark-white.png";
 
 function Main() {
   const [clock, setClock] = useState(new Date());
