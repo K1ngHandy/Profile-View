@@ -70,6 +70,7 @@ function Main() {
       </div>
       <hr className="divider" />
       <p>
+        {"Coded by: "}
         <a
           href={link ? link.url : "#"}
           target="_blank"
@@ -82,7 +83,8 @@ function Main() {
             GitHub
           </span>
         </a>
-        &nbsp;&copy; 2025. All rights reserved.
+        <br></br>
+        &nbsp;&copy;{new Date().getFullYear()}, All rights reserved.
       </p>
     </div>
   );
