@@ -131,4 +131,9 @@ main {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
     }
+
+    .tooltip:hover .tooltiptext {
+        visibility: hidden;
+        opacity: 0;
+    }
 }
