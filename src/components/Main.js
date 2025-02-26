@@ -6,6 +6,7 @@ import logo from "../assets/images/LionCoinToken.png";
 function Main() {
   const [clock, setClock] = useState(new Date());
   const [blink, setBlink] = useState(true);
+  const [buttonColor, setButtonColor] = useState(`#660066`);
 
   const { icon: githubIcon, url: githubUrl } =
     linksData.find((link) => link.name === "GitHub") || {};
@@ -44,6 +45,10 @@ function Main() {
     return `${day}/${month}/${year}`;
   };
 
+  const handleColorChange = () => {
+    setButtonColor("440044");
+  };
+
   return (
     <div className="main-container">
       <img className="App-logo" src={logo} alt="logo" />
@@ -66,25 +71,26 @@ function Main() {
             <span className="tooltiptext">{link.name}</span>
           </button>
         ))}
-      </div>
-      <hr className="divider" />
-      <div className="grid-container">
         {linksData.slice(6, 9).map((link, idx) => (
           <button
-            className="tooltip"
+            className={`tooltip ${
+              idx === linksData.slice(6, 9).length - 1 ? "bluesky" : ""
+            }`}
             key={idx}
             onClick={() => openLink(link.url)}
             title={link.name}
+            style={
+              idx === linksData.slice(6, 9).length - 1
+                ? { backgroundColor: `${buttonColor}` }
+                : {}
+            }
           >
-            <img
-              src={link.icon}
-              // alt={link.name}
-              className="icons"
-            />
+            <img src={link.icon} alt={link.name} className="icons" />
             <span className="tooltiptext">{link.name}</span>
           </button>
         ))}
       </div>
+      <hr className="divider" />
       <p>
         {"Coded by: "}
         <a

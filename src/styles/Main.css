@@ -12,7 +12,7 @@ main {
 }
 .main-container button {
     background-color: #440044;
-    /* color: #fff; */
+    color: slategray;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -124,6 +124,17 @@ main {
     height: 1px;
     margin: 3px auto;
     width: 81%;
+}
+
+.bluesky {
+    background-color: #440044;
+    color: lightslategray;
+}
+.bluesky:hover {
+    background-color: #660066;
+}
+.bluesky:active {
+    background-color: #990099;
 }
 
 @media (max-width: 600px) {
