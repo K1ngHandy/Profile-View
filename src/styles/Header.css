@@ -34,14 +34,16 @@
     }
 }
 .App-logo {
-    height: 21vmin;
-    padding: 1.2vw;
-    pointer-events: none;
+    padding: 0;
+    height: 33vmin;
+    padding: 0.3vh;
     position: absolute;
-    top: 0;
-    left: 90%;
-    transform: translateX(-50%);
-}   
+    left: 72%;
+    top: 9px;
+}
 .App-logo:hover {
-    animation: bounce 1s;
+    cursor: pointer;
+}
+.bounce {
+    animation: bounce 1.2s;
 }

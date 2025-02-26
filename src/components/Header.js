@@ -1,15 +1,13 @@
 import React from "react";
 import "../styles/Header.css";
-import logo from "../assets/images/LightWatermark.png";
+import lightLogo from "../assets/images/LionCoinToken.png";
 
 function Header() {
   return (
     <header className="header">
       <h1>K1ngHandy</h1>
       <p>🧭 Downingtown, PA</p>
-      <div className="App-logo">
-        <img src={logo} alt="logo" />
-      </div>
+      <img src={lightLogo} className="App-logo bounce" alt="logo" />
     </header>
   );
 }
