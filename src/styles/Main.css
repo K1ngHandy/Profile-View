@@ -36,6 +36,10 @@ main {
     background-color: #330033;
     transform: scale(0.95);
 }
+.main-container button.focused {
+    width: 200px;
+    height: 60px;
+}
 
 .clock {
     font-size: 2em;
@@ -53,9 +57,7 @@ main {
 .clock::after {
     content: none;
 }
-.clock:hover::after {
-    opacity: 1;
-}
+
 .blink {
     animation: blink 1s infinite;
 }
@@ -66,17 +68,6 @@ main {
     0.4%, 100% {
         opacity: 0;
     }
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 12px;
-    padding: 10px;
-    justify-items: center;
-    align-items: center;
-    position: relative;
 }
 
 .tooltip {
@@ -95,7 +86,6 @@ main {
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: 50%;
     margin-left: -120px;
     opacity: 0;
     transition: opacity 0.3s;
@@ -128,10 +118,5 @@ main {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: hidden;
-        opacity: 0;
     }
 }

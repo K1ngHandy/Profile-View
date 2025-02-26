@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 12px;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+.grid-container > * {
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto repeat(2, 1fr);
+    }
+    .grid-container .github-item {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        transform: scale(2);
+    }
+    .grid-container .other-item {
+        grid-column: span 2;
+    }
+}

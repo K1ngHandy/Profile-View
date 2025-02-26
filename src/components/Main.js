@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import GridContainer from "./GridContainer.js";
 import "../styles/Main.css";
 import linksData from "../data/linksData.js";
 
@@ -52,19 +53,7 @@ function Main() {
         </div>
       </div>
       <br />
-      <div className="grid-container">
-        {linksData.slice(0, 9).map((link, idx) => (
-          <button
-            className="tooltip"
-            key={idx}
-            onClick={() => openLink(link.url)}
-            title={link.name}
-          >
-            <img src={link.icon} alt={link.name} className="icons" />
-            <span className="tooltiptext">{link.name}</span>
-          </button>
-        ))}
-      </div>
+      <GridContainer openLink={openLink} />
       <hr className="divider" />
       <p>
         {"Coded by: "}
@@ -76,7 +65,9 @@ function Main() {
         >
           K1ngHandy
           <span className="tooltiptext">
-            <img src={githubIcon} alt="GitHub" className="icons" />
+            {githubIcon && (
+              <img src={githubIcon} alt="GitHub" className="icons" />
+            )}
             GitHub
           </span>
         </a>
