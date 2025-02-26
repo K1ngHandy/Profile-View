@@ -1,12 +1,13 @@
 .grid-container {
+    width: 100%;
+    font-size: 2em;
+    max-width: 50%;
+    border: 2px solid #330033;
+    overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 12px;
     padding: 10px;
-    justify-items: center;
-    align-items: center;
-    position: relative;
 }
 
 @media (max-width: 600px) {

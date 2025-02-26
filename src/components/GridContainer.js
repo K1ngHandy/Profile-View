@@ -49,7 +49,7 @@ function GridContainer({ openLink }) {
             title={link.name}
           />
 
-          <img src={link.icon} />
+          <img src={link.icon} alt={link.name} />
         </React.Fragment>
       ))}
     </div>
