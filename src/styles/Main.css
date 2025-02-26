@@ -10,6 +10,10 @@ main {
 .main-container {
     position: relative;
 }
+.main-container p {
+    color: #330033;
+    font-weight: bolder;
+}
 .main-container button {
     background-color: #440044;
     color: slategray;
@@ -31,12 +35,6 @@ main {
 .main-container button:active {
     background-color: #330033;
     transform: scale(0.95);
-}
-
-.App-logo {
-    height: 21vmin;
-    pointer-events: none;   
-    margin-top: -24px;
 }
 
 .clock {
@@ -124,17 +122,6 @@ main {
     height: 1px;
     margin: 3px auto;
     width: 81%;
-}
-
-.bluesky {
-    background-color: #440044;
-    color: lightslategray;
-}
-.bluesky:hover {
-    background-color: #660066;
-}
-.bluesky:active {
-    background-color: #990099;
 }
 
 @media (max-width: 600px) {

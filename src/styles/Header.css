@@ -18,9 +18,30 @@
     left: 0;
     z-index: -1;
 }
-.header h1 {
+.header h1, p {
     color: lightsteelblue;
 }
-.header p {
-    color: lightsteelblue;
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.App-logo {
+    height: 21vmin;
+    padding: 1.2vw;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 90%;
+    transform: translateX(-50%);
+}   
+.App-logo:hover {
+    animation: bounce 1s;
 }
