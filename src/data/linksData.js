@@ -1,9 +1,13 @@
-import githubIcon from "../assets/images/github-mark-white.png";
-import tiktokIcon from "../assets/images/TikTok_Icon_Black_Circle.png";
-import whatsappIcon from "../assets/images/Digital_Glyph_Green.png";
-import instagramIcon from "../assets/images/Instagram_Glyph_White.png";
-import threadsIcon from "../assets/images/threads-logo-white-01.png";
-import discordIcon from "../assets/images/Discord Mark Blue.svg";
+import {
+  githubIcon,
+  tiktokIcon,
+  whatsAppIcon,
+  instagramIcon,
+  threadsIcon,
+  // indeedIcon,
+  discordIcon,
+  // youtubeIcon,
+} from "../assets/images";
 
 // username & links
 const username = "K1ngHandy";
@@ -20,12 +24,12 @@ const linksData = [
     url: `https://www.threads.net/@${username}`,
   },
   {
-    icon: discordIcon,
-    name: "Discord",
-    url: `https://discord.com/channels/1140423533625888889/1140423534372470806`,
+    // icon: youtubeIcon,
+    name: "YouTube",
+    url: `https://www.youtube.com/@${username}`,
   },
   {
-    icon: whatsappIcon,
+    icon: whatsAppIcon,
     name: "WhatsApp",
     url: `https://whatsapp.com/channel/0029Vb4QSVPKLaHhn8SfS33K`,
   },
@@ -33,6 +37,16 @@ const linksData = [
     icon: instagramIcon,
     name: "Instagram",
     url: `https://instagram.com/${username}`,
+  },
+  {
+    // icon: indeedIcon,
+    name: "Indeed",
+    url: "https://profile.indeed.com/p/stephenh-uaweqfx",
+  },
+  {
+    icon: discordIcon,
+    name: "Discord",
+    url: `https://discord.com/channels/1140423533625888889/1140423534372470806`,
   },
 ];
 

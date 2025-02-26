@@ -55,7 +55,7 @@ function Main() {
       </div>
       <br />
       <div className="grid-container">
-        {linksData.map((link, idx) => (
+        {linksData.slice(0, 6).map((link, idx) => (
           <button
             className="tooltip"
             key={idx}
@@ -68,6 +68,23 @@ function Main() {
         ))}
       </div>
       <hr className="divider" />
+      <div className="grid-container">
+        {linksData.slice(6, 9).map((link, idx) => (
+          <button
+            className="tooltip"
+            key={idx}
+            onClick={() => openLink(link.url)}
+            title={link.name}
+          >
+            <img
+              src={link.icon}
+              // alt={link.name}
+              className="icons"
+            />
+            <span className="tooltiptext">{link.name}</span>
+          </button>
+        ))}
+      </div>
       <p>
         {"Coded by: "}
         <a
