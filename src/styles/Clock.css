@@ -1,37 +1,22 @@
-.clock-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 100%;
-    min-width: 400px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-}
-.clock-time, .clock-date {
-    grid-column: span 2;
-    text-align: center;
+.clock {
     font-size: 2em;
+    max-width: 45%;
+    margin: 0 auto;
     padding: 18px;
-    color: darkslategray;
+    color: lightslategray;
     font-weight: bold;
-    background-color: aliceblue;
+    background-color: #f0f0f0;
     border: 2px solid #330033;
     border-radius: 33px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    position: relative;
 }
-.clock-date {
-    display: none;
+.clock::after {
+    content: none;
 }
-
-.clock-container:hover .clock-date {
-    display: block;
+.clock:hover::after {
+    opacity: 1;
 }
-.clock-container:hover .clock-time {
-    display: none;
-}
-
 blink {
     animation: blink 1s infinite;
 }

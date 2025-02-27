@@ -1,3 +1,11 @@
+body, .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -7,6 +15,18 @@
     justify-items: center;
     align-items: center;
     position: relative;
+    text-align: center;
+}
+.grid-container > * {
+    grid-column: span 1;
+    grid-row: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #555;
+    border-radius: 33%;
+    width: 100px;
+    height: 100px;
 }
 
 .tooltip {
@@ -14,7 +34,7 @@
     display: inline-block;
     cursor: pointer;
 }
-.tooltip, .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 220px;
     background-color: #555;
@@ -25,6 +45,7 @@
     position: absolute;
     z-index: 1;
     bottom: 125%;
+    left: 50%;
     margin-left: -120px;
     opacity: 0;
     transition: opacity 0.3s;
@@ -38,7 +59,7 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 4px ghba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .icons {
