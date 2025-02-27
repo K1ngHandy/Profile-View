@@ -30,9 +30,23 @@ function Clock() {
 
   const dateFormat = (date) => {
     const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const monthName = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const month = monthName[date.getMonth()];
     const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
+    return `${day} ${month} ${year}`;
   };
 
   return (
