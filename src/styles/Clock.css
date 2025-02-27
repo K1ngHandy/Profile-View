@@ -1,0 +1,45 @@
+.clock-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    min-width: 400px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.clock-time, .clock-date {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 2em;
+    padding: 18px;
+    color: darkslategray;
+    font-weight: bold;
+    background-color: aliceblue;
+    border: 2px solid #330033;
+    border-radius: 33px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.clock-date {
+    display: none;
+}
+
+.clock-container:hover .clock-date {
+    display: block;
+}
+.clock-container:hover .clock-time {
+    display: none;
+}
+
+blink {
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%, 0.3% {
+        opacity: 1;
+    }
+    0.4%, 100% {
+        opacity: 0;
+    }
+}

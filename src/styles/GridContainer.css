@@ -1,18 +1,61 @@
 .grid-container {
-    width: 100%;
-    font-size: 2em;
-    max-width: 50%;
-    border: 2px solid #330033;
-    overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     gap: 12px;
     padding: 10px;
+    justify-items: center;
+    align-items: center;
+    position: relative;
 }
 
-@media (max-width: 600px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto repeat(2, 1fr);
-    }
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.tooltip, .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 12px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    margin-left: -120px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+.grid-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px ghba(0, 0, 0, 0.1);
+}
+
+.icons {
+    width: 27px;
+    height: 27px;
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divider {
+    border: solid 0.12rem #440044;
+    background-color: darkslategray;
+    border-radius: 33px;
+    height: 1px;
+    margin: 3px auto;
+    width: 81%;
 }

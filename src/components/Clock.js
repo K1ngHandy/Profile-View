@@ -1,0 +1,46 @@
+import React, { useState, useEffect } from "react";
+import "../styles/Clock.css";
+
+function Clock() {
+  const [clock, setClock] = useState(new Date());
+  const [blink, setBlink] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setClock(new Date());
+      setBlink((prev) => !prev);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const timeFormat = (date) => {
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+    return (
+      <>
+        {hours}
+        <span className={blink ? "blink" : ""}>:</span>
+        {minutes}
+        <span className={blink ? "blink" : ""}>:</span>
+        {seconds}
+      </>
+    );
+  };
+
+  const dateFormat = (date) => {
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
+
+  return (
+    <div className="clock-container">
+      <div className="clock-time">{timeFormat(clock)}</div>
+      <div className="clock-date">{dateFormat(clock)}</div>
+    </div>
+  );
+}
+
+export default Clock;
