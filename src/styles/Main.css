@@ -24,24 +24,28 @@ main {
 }
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 180px;
-    background-color: #555;
-    color: #fff;
+    width: auto;
+    min-width: 81px;
+    background-color: #440044;
+    color: lightsteelblue;
+    font-weight: bold;
     text-align: center;
     border-radius: 12px;
-    padding: 3px 0;
+    padding: 6px 12px;
     position: absolute;
     z-index: 1;
     bottom: 105%;
     left: 50%;
-    margin-left: -120px;
+    transform: translate(-50%);
+    margin-left: 0;
     opacity: 0;
     transition: opacity 0.3s;
+    white-space: nowrap;
 }
 .tooltip:hover .tooltiptext {
     visibility: visible;
     display: block;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .grid-container {
@@ -70,4 +74,14 @@ main {
         visibility: hidden;
         opacity: 0;
     }
+}
+
+.divider {
+    border: solid 0.12rem lightsteelblue;
+    background-color: darkslategray;
+    border-radius: 33px;
+    height: 1px;
+    margin: 3px auto;
+    width: 72%;
+    box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.3);
 }

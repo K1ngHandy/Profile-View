@@ -3,9 +3,6 @@ import "../styles/GridContainer.css";
 import linksData from "../data/linksData";
 
 function GridContainer() {
-  const { icon: githubIcon, url: githubUrl } =
-    linksData.find((link) => link.name === "GitHub") || {};
-
   const openLink = (url) => {
     window.open(url, "_blank");
   };
@@ -25,24 +22,6 @@ function GridContainer() {
           </button>
         ))}
       </div>
-      <hr className="divider" />
-      <p>
-        {"Coded by: "}
-        <a
-          href={githubUrl || "#"}
-          target="blank"
-          rel="noopener noreferrer"
-          className="tooltip"
-        >
-          K1ngHandy
-          <span className="tooltiptext">
-            <img src={githubIcon} alt="GitHub" className="icons" />
-            GitHub
-          </span>
-        </a>
-        <br></br>
-        $nbsp;&copy;{new Date().getFullYear()}, All rights reserved.
-      </p>
     </>
   );
 }

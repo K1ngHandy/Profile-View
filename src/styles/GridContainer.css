@@ -1,9 +1,15 @@
-body, .main-container {
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    flex: 1;
+    padding: 20px 0;
 }
 
 .grid-container {
@@ -16,6 +22,8 @@ body, .main-container {
     align-items: center;
     position: relative;
     text-align: center;
+    max-height: 100%;
+    overflow: auto;
 }
 .grid-container > * {
     grid-column: span 1;
@@ -28,10 +36,7 @@ body, .main-container {
     width: 100px;
     height: 100px;
 }
-.main-container p {
-    color: #330033;
-    font-weight: bolder;
-}
+
 .main-container button {
     background-color: lightsteelblue;
     border: none;
@@ -56,14 +61,4 @@ body, .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.divider {
-    border: solid 0.12rem #440044;
-    background-color: darkslategray;
-    border-radius: 33px;
-    height: 1px;
-    margin: 3px auto;
-    width: 45%;
-    box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.3);
 }

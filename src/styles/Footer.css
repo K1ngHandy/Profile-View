@@ -6,3 +6,18 @@
     width: 100%;
     overflow: hidden;
 }
+
+.footer p {
+    color: lightsteelblue;
+    font-weight: bold;
+}
+
+.footer a {
+    color: steelblue;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.footer a:hover {
+    color: #c0d6f0;
+    text-decoration: underline;
+}
