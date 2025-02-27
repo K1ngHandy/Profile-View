@@ -1,10 +1,11 @@
 .footer {
     background-color: #440044;
-    padding: 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
     position: fixed;
     bottom: 0;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
+    z-index: 100;
 }
 
 .footer p {
@@ -16,8 +17,31 @@
     color: steelblue;
     text-decoration: none;
     font-weight: bolder;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .footer a:hover {
-    color: #c0d6f0;
-    text-decoration: underline;
+    color: lightsteelblue;
+    transform: scale(1.2);
+}
+
+.footer .tooltip {
+    position: relative;
+    z-index: 101;
+}
+
+.footer .tooltip .tooltiptext {
+    background-color: #333;
+    z-index: 102;
+    position: absolute;
+    bottom: 150%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.footer .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }

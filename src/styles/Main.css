@@ -26,15 +26,15 @@ main {
     visibility: hidden;
     width: auto;
     min-width: 81px;
-    background-color: #440044;
+    background-color: #660066;
     color: lightsteelblue;
     font-weight: bold;
     text-align: center;
     border-radius: 12px;
     padding: 6px 12px;
     position: absolute;
-    z-index: 1;
-    bottom: 105%;
+    z-index: 9999;
+    bottom: 78%;
     left: 50%;
     transform: translate(-50%);
     margin-left: 0;
@@ -51,6 +51,7 @@ main {
 .grid-container {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, auto);
+    z-index: 1;
 }
 @media (max-width: 1200px) {
     .grid-container {
