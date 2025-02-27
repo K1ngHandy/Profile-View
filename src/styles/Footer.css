@@ -26,25 +26,27 @@
 
 .footer .tooltip {
     position: relative;
+    display: inline-block;
     z-index: 101;
 }
-
 .footer .tooltip .tooltiptext {
-    background-color: #333;
-    z-index: 102;
-    position: absolute;
-    bottom: 150%;
-    transform: translateX(-50%);
-    white-space: nowrap;
     visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius; 5px 0;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
     opacity: 0;
-    pointer-events: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    color: slategray;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
+    transition: opacity 0.3s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.footer .tooltip:hover .tooltiptext {
+.footer .tooltip.active .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
