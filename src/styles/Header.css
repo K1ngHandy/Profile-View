@@ -18,8 +18,14 @@
     left: 0;
     z-index: -1;
 }
-.header h1, p {
+.header h1{
     color: lightsteelblue;
+    font-weight: bolder;
+    font-size: xxx-large;
+}
+.header p {
+    color: lightsteelblue;
+    font-weight: bold;
 }
 
 @keyframes bounce {

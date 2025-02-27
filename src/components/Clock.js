@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Clock.css";
-import linksData from "../data/linksData";
 
 function Clock() {
   const [clock, setClock] = useState(new Date());
@@ -38,7 +37,7 @@ function Clock() {
 
   return (
     <>
-      <div className="clock-time">
+      <div className="clock tooltip" data-date={new Date()}>
         {timeFormat(clock)}
         <span className="tooltiptext">{dateFormat(clock)}</span>
       </div>

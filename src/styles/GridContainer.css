@@ -10,8 +10,8 @@ body, .main-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    gap: 12px;
-    padding: 10px;
+    gap: 15px;
+    padding: calc(21px + 2vw);
     justify-items: center;
     align-items: center;
     position: relative;
@@ -28,43 +28,29 @@ body, .main-container {
     width: 100px;
     height: 100px;
 }
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+.main-container p {
+    color: #330033;
+    font-weight: bolder;
 }
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 220px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 12px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -120px;
-    opacity: 0;
-    transition: opacity 0.3s;
+.main-container button {
+    background-color: lightsteelblue;
+    border: none;
+    border-radius: 30px;
+    box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.3);
 }
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 0.9;
+.main-container button:hover {
+    background-color: slategray;
+    border: solid 1.2px #660066;
+    transform: scale(1.2);
 }
-
-.grid-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.main-container button:active {
+    background-color: lightsteelblue;
+    transform: scale(0.95);
 }
 
 .icons {
-    width: 27px;
-    height: 27px;
+    width: 33px;
+    height: 33px;
 }
 .links {
     display: flex;
@@ -78,5 +64,6 @@ body, .main-container {
     border-radius: 33px;
     height: 1px;
     margin: 3px auto;
-    width: 81%;
+    width: 45%;
+    box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.3);
 }

@@ -2,13 +2,22 @@ import {
   githubIcon,
   tiktokIcon,
   whatsAppIcon,
-  instagramIcon,
+  instagramIconLight,
+  instagramIconDark,
   threadsIcon,
   indeedIcon,
   discordIcon,
   youtubeIcon,
   blueskyIcon,
 } from "../assets/images";
+
+const getCurrentTheme = () => {
+  return window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+const dark = getCurrentTheme() === "dark";
 
 // username & links
 const username = "K1ngHandy";
@@ -30,12 +39,12 @@ const linksData = [
     url: `https://www.threads.net/@${username}`,
   },
   {
-    icon: tiktokIcon,
+    icon: dark ? tiktokIcon : tiktokIcon,
     name: "TikTok",
     url: `https://www.tiktok.com/@${username}?_t=ZT-8tmP8GTOzNL&_r=1`,
   },
   {
-    icon: instagramIcon,
+    icon: dark ? instagramIconDark : instagramIconLight,
     name: "Instagram",
     url: `https://instagram.com/${username}`,
   },
