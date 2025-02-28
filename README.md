@@ -1,5 +1,5 @@
 ## Profile View
-Displays profile view for social links
+Displays profile view for social links  
 Dark mode enabled
 
 ## App
