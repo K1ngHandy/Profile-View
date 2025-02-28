@@ -4,8 +4,15 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    transition: transform 0.3s ease-in-out;
     overflow: hidden;
     z-index: 100;
+}
+.footer.visible {
+    transform: translateY(0);
+}
+.footer.hidden {
+    transform: translateY(100%);
 }
 
 .footer p {
@@ -24,13 +31,12 @@
     transform: scale(1.2);
 }
 
-.footer .tooltip {
+.link {
     position: relative;
     display: inline-block;
-    z-index: 101;
+    z-index: 100;
 }
-.footer .tooltip .tooltiptext {
-    visibility: hidden;
+.link .link-text {
     width: 120px;
     background-color: #333;
     color: #fff;
@@ -38,15 +44,16 @@
     border-radius: 5px 0;
     padding: 5px 0;
     position: absolute;
-    z-index: 1;
+    z-index: 101;
     bottom: 125%;
     left: 50%;
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
 }
-.footer .tooltip.active .tooltiptext {
+.link.active .link-text {
     visibility: visible;
     opacity: 1;
 }

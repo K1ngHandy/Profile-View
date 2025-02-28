@@ -1,63 +1,70 @@
-import React, { useState, useEffect } from "react";
-import "../styles/Clock.css";
+import React, { useState, useEffect } from 'react';
+import '../styles/Clock.css';
 
-function Clock() {
-  const [clock, setClock] = useState(new Date());
-  const [blink, setBlink] = useState(true);
+function Clock(props) {
+	const { mouseOver, mouseOut, active } = props;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setClock(new Date());
-      setBlink((prev) => !prev);
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+	const [clock, setClock] = useState(new Date());
+	const [blink, setBlink] = useState(true);
 
-  const timeFormat = (date) => {
-    const hours = String(date.getHours()).padStart(2, "0");
-    const minutes = String(date.getMinutes()).padStart(2, "0");
-    const seconds = String(date.getSeconds()).padStart(2, "0");
-    return (
-      <>
-        {hours}
-        <span className={blink ? "blink" : ""}>:</span>
-        {minutes}
-        <span className={blink ? "blink" : ""}>:</span>
-        {seconds}
-      </>
-    );
-  };
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setClock(new Date());
+			setBlink((prev) => !prev);
+		}, 1000);
+		return () => clearInterval(interval);
+	}, []);
 
-  const dateFormat = (date) => {
-    const day = String(date.getDate()).padStart(2, "0");
-    const monthName = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    const month = monthName[date.getMonth()];
-    const year = date.getFullYear();
-    return `${day} ${month} ${year}`;
-  };
+	const timeFormat = (date) => {
+		const hours = String(date.getHours()).padStart(2, '0');
+		const minutes = String(date.getMinutes()).padStart(2, '0');
+		const seconds = String(date.getSeconds()).padStart(2, '0');
+		return (
+			<>
+				{hours}
+				<span className={blink ? 'blink' : ''}>:</span>
+				{minutes}
+				<span className={blink ? 'blink' : ''}>:</span>
+				{seconds}
+			</>
+		);
+	};
 
-  return (
-    <>
-      <div className="clock tooltip" data-date={new Date()}>
-        {timeFormat(clock)}
-        <span className="tooltiptext">{dateFormat(clock)}</span>
-      </div>
-      <br />
-    </>
-  );
+	const dateFormat = (date) => {
+		const day = String(date.getDate()).padStart(2, '0');
+		const monthName = [
+			'Jan',
+			'Feb',
+			'Mar',
+			'Apr',
+			'May',
+			'Jun',
+			'Jul',
+			'Aug',
+			'Sep',
+			'Oct',
+			'Nov',
+			'Dec',
+		];
+		const month = monthName[date.getMonth()];
+		const year = date.getFullYear();
+		return `${day} ${month} ${year}`;
+	};
+
+	return (
+		<>
+			<div
+				className={`clock ${active ? 'active' : ''}`}
+				data-date={new Date()}
+				onMouseOver={mouseOver}
+				onMouseOut={mouseOut}
+			>
+				{timeFormat(clock)}
+				<span className="date-display">{dateFormat(clock)}</span>
+			</div>
+			<br />
+		</>
+	);
 }
 
 export default Clock;
