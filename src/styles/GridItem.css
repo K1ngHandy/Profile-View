@@ -11,6 +11,11 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+body.dark-mode .grid-item {
+    background-color: #999999;
+}
+
 .grid-item:hover {
     transform: scale(1.2);
     background-color: lightsteelblue;
