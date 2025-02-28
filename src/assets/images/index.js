@@ -9,9 +9,10 @@ import instagramIconColor from './instagram-icon-color.png';
 import threadsIconWhite from './threads-icon-white.png';
 import threadsIconBlack from './threads-icon-black.png';
 import indeedIcon from './LightWatermark.png';
-import discordIcon from './Discord Mark Blue.svg';
+import discordIconBlue from './discord-icon-blue.svg';
+import discordIconWhite from './discord-icon-white.png';
 import youtubeIcon from './youtube-icon.png';
-import blueskyIcon from './DarkWatermark.png';
+import blueskyIconBlue from './bluesky-icon-blue.png';
 
 export {
 	githubIconBlack,
@@ -25,7 +26,8 @@ export {
 	threadsIconWhite,
 	threadsIconBlack,
 	indeedIcon,
-	discordIcon,
+	discordIconBlue,
+	discordIconWhite,
 	youtubeIcon,
-	blueskyIcon,
+	blueskyIconBlue,
 };

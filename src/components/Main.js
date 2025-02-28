@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import GridContainer from './GridContainer.js';
 import Clock from './Clock.js';
+import Footer from './Footer.js';
 import '../styles/Main.css';
 
 function Main() {
@@ -28,6 +29,11 @@ function Main() {
 				active={active === 'clock'}
 			/>
 			<GridContainer
+				mouseOver={handleMouseOver}
+				mouseOut={handleMouseOut}
+				active={active}
+			/>
+			<Footer
 				mouseOver={handleMouseOver}
 				mouseOut={handleMouseOut}
 				active={active}

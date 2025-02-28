@@ -10,9 +10,10 @@ import {
 	threadsIconBlack,
 	threadsIconWhite,
 	indeedIcon,
-	discordIcon,
+	discordIconBlue,
+	discordIconWhite,
 	youtubeIcon,
-	blueskyIcon,
+	blueskyIconBlue,
 } from '../assets/images';
 
 const getCurrentTheme = () => {
@@ -63,12 +64,12 @@ const linksData = [
 		url: 'https://profile.indeed.com/p/stephenh-uaweqfx',
 	},
 	{
-		icon: discordIcon,
+		icon: dark ? discordIconBlue : discordIconWhite,
 		name: 'Discord',
 		url: `https://discord.com/channels/1140423533625888889/1140423534372470806`,
 	},
 	{
-		icon: blueskyIcon,
+		icon: blueskyIconBlue,
 		name: 'Bluesky',
 		url: `https://bsky.app/profile/${username}.bsky.social`,
 	},

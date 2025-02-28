@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Footer.css';
 import linksData from '../data/linksData';
+import { githubIconWhite } from '../assets/images';
 
 function Footer(props) {
 	const { mouseOver, mouseOut, active } = props;
 	const [visible, setVisible] = useState(true);
 	const [scrollY, setScrollY] = useState(0);
 
-	const { icon: githubIcon, url: githubUrl } =
+	const { url: githubUrl } =
 		linksData.find((link) => link.name === 'GitHub') || {};
+
+	const footerId = 'footer-github-link';
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -35,15 +38,15 @@ function Footer(props) {
 					href={githubUrl || '#'}
 					target="blank"
 					rel="noopener noreferrer"
-					className={`link ${active ? 'active' : ''}`}
-					onMouseOver={mouseOver}
+					className={`link ${active === footerId ? 'active' : ''}`}
+					onMouseOver={() => mouseOver(footerId)}
 					onMouseOut={mouseOut}
 				>
 					K1ngHandy
 					{active && (
 						<span className="active-text">
 							<img
-								src={githubIcon}
+								src={githubIconWhite}
 								alt="GitHub"
 								className="icons"
 							/>

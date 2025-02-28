@@ -25,9 +25,10 @@
     text-decoration: none;
     font-weight: bolder;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3 ease;
 }
 .footer a:hover {
-    color: lightsteelblue;
+    color: #fff;
     transform: scale(1.2);
 }
 
@@ -36,24 +37,35 @@
     display: inline-block;
     z-index: 100;
 }
-.link .link-text {
-    width: 120px;
-    background-color: #333;
-    color: #fff;
+.link .active-text {
+    visibility: hidden;
+    width: auto;
+    min-width: 81px;
+    background-color: #330033;
+    color: lightsteelblue;
+    font-weight: bold;
     text-align: center;
-    border-radius: 5px 0;
-    padding: 5px 0;
+    border-radius: 12px;
+    padding: 6px 12px;
     position: absolute;
     z-index: 101;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
+    bottom: -56%;
+    left: 165%;
+    transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    visibility: hidden;
+    white-space: nowrap;
+    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
 }
-.link.active .link-text {
+.link.active .active-text {
     visibility: visible;
     opacity: 1;
+}
+
+.link .icons {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
 }
