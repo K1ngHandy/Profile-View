@@ -8,7 +8,8 @@ import instagramIconWhite from './instagram-icon-white.png';
 import instagramIconColor from './instagram-icon-color.png';
 import threadsIconWhite from './threads-icon-white.png';
 import threadsIconBlack from './threads-icon-black.png';
-import indeedIcon from './LightWatermark.png';
+import indeedIconBlue from './indeed-icon-blue.png';
+import indeedIconWhite from './indeed-icon-white.png';
 import discordIconBlue from './discord-icon-blue.svg';
 import discordIconWhite from './discord-icon-white.png';
 import youtubeIcon from './youtube-icon.png';
@@ -23,9 +24,10 @@ export {
 	whatsappIconWhite,
 	instagramIconColor,
 	instagramIconWhite,
-	threadsIconWhite,
 	threadsIconBlack,
-	indeedIcon,
+	threadsIconWhite,
+	indeedIconBlue,
+	indeedIconWhite,
 	discordIconBlue,
 	discordIconWhite,
 	youtubeIcon,
