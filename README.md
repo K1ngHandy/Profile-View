@@ -1,6 +1,8 @@
 ## Profile View
 Displays profile view for social links
 
+## Dark mode enabled
+
 ## App
   ## Header
   ## Main
