@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    gap: 15px;
+    gap: 21px;
     padding: calc(21px + 2vw);
     justify-items: center;
     align-items: center;
@@ -17,19 +17,13 @@
 
 @media (max-width: 1200px) {
     .grid-container {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 15px;
     }
 }
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, auto);
-    }
-}
-@media (max-width: 600px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
+        gap: 9px;
     }
 }
