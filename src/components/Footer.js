@@ -6,7 +6,7 @@ import { githubIconWhite } from '../assets/images';
 function Footer(props) {
 	const { mouseOver, mouseOut, active } = props;
 	const [visible, setVisible] = useState(true);
-	const [scrollY, setScrollY] = useState(0);
+	const [lastScrollY, setLastScrollY] = useState(0);
 
 	const { url: githubUrl } =
 		linksData.find((link) => link.name === 'GitHub') || {};
@@ -14,21 +14,23 @@ function Footer(props) {
 	const footerId = 'footer-github-link';
 
 	useEffect(() => {
-		const handleScroll = () => {
-			const currentPosition = window.scrollY;
+		const scrollThreshold = window.scrollY;
 
-			if (currentPosition > scrollY) {
-				setVisible(false);
-			} else {
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+
+			if (currentScrollY <= 5) {
 				setVisible(true);
+			} else if (Math.abs(currentScrollY - lastScrollY) > scrollThreshold) {
+				setVisible(currentScrollY < lastScrollY);
 			}
 
-			setScrollY(currentPosition);
+			setLastScrollY(currentScrollY);
 		};
 
 		window.addEventListener('scroll', handleScroll, { passive: true });
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, [scrollY]);
+	}, [lastScrollY]);
 
 	return (
 		<footer className={`footer ${visible ? 'visible' : 'hidden'}`}>
