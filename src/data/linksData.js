@@ -10,7 +10,8 @@ import {
 	blueskyIconBlue,
 } from '../assets/images';
 
-const username = 'K1ngHandy';
+export const username = 'K1ngHandy';
+
 const linksData = [
 	{
 		icon: youtubeIcon,
