@@ -22,6 +22,9 @@
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.music-icon:hover {
+    transform: scale(1.08);
+}
 
 .music-container h3 {
     font-size: 2em;
