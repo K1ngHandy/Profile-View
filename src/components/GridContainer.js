@@ -4,14 +4,9 @@ import GridItem from './GridItem';
 import linksData from '../data/linksData';
 
 function GridContainer(props) {
-	const { mouseOver, mouseOut, active } = props;
-
-	const openLink = (url) => {
-		window.open(url, '_blank');
-	};
+	const { mouseOver, mouseOut, onClick, active } = props;
 
 	return (
-		// <>
 		<div className="grid-container">
 			{linksData.slice(0, 9).map((link, idx) => {
 				const id = `button-${idx}`;
@@ -21,7 +16,7 @@ function GridContainer(props) {
 						key={idx}
 						id={id}
 						active={active === id}
-						onClick={() => openLink(link.url)}
+						onClick={() => onClick(link.url)}
 						onMouseOver={() => mouseOver(id)}
 						onMouseOut={mouseOut}
 						title={link.name}
@@ -31,7 +26,6 @@ function GridContainer(props) {
 				);
 			})}
 		</div>
-		// </>
 	);
 }
 

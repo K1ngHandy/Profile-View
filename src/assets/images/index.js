@@ -1,4 +1,5 @@
 import logoLight from './LionCoinToken.png';
+import rootIcon from './Root-icon.png';
 import githubIconBlack from './github-icon-black.png';
 import githubIconWhite from './github-icon-white.png';
 import tiktokIconBlack from './tiktok-icon-black.png';
@@ -12,6 +13,7 @@ import blueskyIconBlue from './bluesky-icon-blue.png';
 
 export {
 	logoLight,
+	rootIcon,
 	githubIconBlack,
 	githubIconWhite,
 	tiktokIconBlack,

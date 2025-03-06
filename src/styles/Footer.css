@@ -49,13 +49,14 @@
     padding: 6px 12px;
     position: absolute;
     z-index: 101;
-    bottom: -56%;
+    bottom: -54%;
     left: 165%;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
     white-space: nowrap;
-    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.3);
+    border: solid 1px lightgray;
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.3);
     font-size: 1.2em;
 }
 .link.active .active-text {

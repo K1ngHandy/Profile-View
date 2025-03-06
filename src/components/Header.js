@@ -3,8 +3,6 @@ import '../styles/Header.css';
 import { logoLight } from '../assets/images';
 
 function Header(props) {
-	// console.log(props);
-	// Want to destructure API request display_name as displayName from props
 	const { display_name: displayName, location } = props.data;
 
 	return (

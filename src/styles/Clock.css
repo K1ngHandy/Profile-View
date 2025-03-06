@@ -52,13 +52,14 @@ blink {
     padding: 6px 12px;
     position: absolute;
     z-index: 11;
-    bottom: -40px;
-    left: 50%;
+    bottom: -33px;
+    left: 90%;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s;
     white-space: nowrap;
-    box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.3);
+    border: solid 1px lightgray;
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .clock.active .date-display {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import GridContainer from './GridContainer.js';
 import Clock from './Clock.js';
+import Music from './Music.js';
 import Footer from './Footer.js';
 import '../styles/Main.css';
 
@@ -18,24 +19,39 @@ function Main() {
 		setActive(null);
 	};
 
+	const handleClick = (url) => {
+		window.open(url, '_blank');
+	};
+
 	return (
 		<div className="main-container">
 			<Clock
 				className="clock"
 				id="clock"
 				data-date={formattedDate}
-				mouseOver={() => handleMouseOver('clock')}
-				mouseOut={handleMouseOut}
+				onMouseOver={() => handleMouseOver('clock')}
+				onMouseOut={handleMouseOut}
 				active={active === 'clock'}
 			/>
+			<br />
+			<Music
+				id="music"
+				onMouseOver={() => handleMouseOver('music')}
+				onMouseOut={handleMouseOut}
+				onClick={handleClick}
+				active={active === 'music'}
+			/>
+			<br />
 			<GridContainer
-				mouseOver={handleMouseOver}
-				mouseOut={handleMouseOut}
+				onMouseOver={handleMouseOver}
+				onMouseOut={handleMouseOut}
+				onClick={handleClick}
 				active={active}
 			/>
 			<Footer
-				mouseOver={handleMouseOver}
-				mouseOut={handleMouseOut}
+				onMouseOver={handleMouseOver}
+				onMouseOut={handleMouseOut}
+				onClick={handleClick}
 				active={active}
 			/>
 		</div>

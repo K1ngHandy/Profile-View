@@ -1,4 +1,5 @@
 import {
+	rootIcon,
 	githubIconBlack,
 	tiktokIconBlack,
 	whatsappIconGreen,
@@ -11,6 +12,12 @@ import {
 } from '../assets/images';
 
 export const username = 'K1ngHandy';
+export const musicLink = {
+	icon: rootIcon,
+	name: 'Roots',
+	alt: 'Roots track',
+	url: 'https://ditto.fm/roots-k1nghandy',
+};
 
 const linksData = [
 	{

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Clock.css';
 
 function Clock(props) {
-	const { mouseOver, mouseOut, active } = props;
+	const { onMouseOver, onMouseOut, active } = props;
 
 	const [clock, setClock] = useState(new Date());
 	const [blink, setBlink] = useState(true);
@@ -56,8 +56,8 @@ function Clock(props) {
 			<div
 				className={`clock ${active ? 'active' : ''}`}
 				data-date={new Date()}
-				onMouseOver={mouseOver}
-				onMouseOut={mouseOut}
+				onMouseOver={onMouseOver}
+				onMouseOut={onMouseOut}
 			>
 				{timeFormat(clock)}
 				<span className="date-display">{dateFormat(clock)}</span>

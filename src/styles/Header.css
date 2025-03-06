@@ -47,14 +47,12 @@
 }
 .App-logo {
     height: 33vmin;
+    border-radius: 50%;
     padding: 0.3vh;
     position: absolute;
     left: 72%;
     top: 75px;
     z-index: 1;
-}
-.App-logo:hover {
-    cursor: pointer;
 }
 .bounce {
     animation: bounce 1.2s;
