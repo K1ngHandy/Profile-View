@@ -20,7 +20,6 @@
     border-radius: 4px;
     margin: 0 5px;
     object-fit: cover;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .music-icon:hover {
     transform: scale(1.08);

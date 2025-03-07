@@ -6,6 +6,7 @@ function Music(props) {
 	const { id, onMouseOver, onMouseOut, onClick, active } = props;
 	const [showPreview, setShowPreview] = useState(false);
 	const [previewPosition, setPreviewPosition] = useState({ x: 0, y: 0 });
+	const [previewError, setPreviewError] = useState(false);
 
 	const getPreviewUrl = (url) => {
 		const apiKey = process.env.REACT_APP_API_KEY;
@@ -25,6 +26,10 @@ function Music(props) {
 		setShowPreview(false);
 
 		if (onMouseOut) onMouseOut();
+	};
+
+	const handleImageError = () => {
+		setPreviewError(true);
 	};
 
 	return (
@@ -57,11 +62,20 @@ function Music(props) {
 					<h4>
 						{username} - {musicLink.name}
 					</h4>
-					<img
-						src={getPreviewUrl(musicLink.url)}
-						alt={`Preview of ${musicLink.name}`}
-						className="preview-image"
-					/>
+					{previewError ? (
+						<img
+							src={musicLink.icon}
+							alt={`${musicLink.name} icon`}
+							className="preview-image fallback"
+						/>
+					) : (
+						<img
+							src={getPreviewUrl(musicLink.url)}
+							alt={`Preview of ${musicLink.name}`}
+							className="preview-image"
+							onError={handleImageError}
+						/>
+					)}
 					<p>Click to listen</p>
 				</div>
 			)}
