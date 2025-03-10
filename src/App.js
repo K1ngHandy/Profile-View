@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './styles/App.css';
 import Header from './components/Header.js';
 import Main from './components/Main.js';
@@ -35,6 +36,7 @@ function App() {
 			<div className="App">
 				<Header data={data} />
 				<Main />
+				<SpeedInsights />
 			</div>
 		</ThemeProvider>
 	);
