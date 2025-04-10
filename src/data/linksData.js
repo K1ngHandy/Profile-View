@@ -38,7 +38,7 @@ const linksData = [
 	{
 		icon: blueskyIconBlue,
 		name: 'Bluesky',
-		url: `https://bsky.app/profile/${username}.bsky.social`,
+		url: `https://bsky.app/profile/${username}.xyz`,
 	},
 	{
 		icon: tiktokIconBlack,
