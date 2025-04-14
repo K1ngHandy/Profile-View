@@ -55,7 +55,6 @@ function Clock(props) {
 		<>
 			<div
 				className={`clock ${active ? 'active' : ''}`}
-				data-date={new Date()}
 				onMouseOver={onMouseOver}
 				onMouseOut={onMouseOut}
 			>
