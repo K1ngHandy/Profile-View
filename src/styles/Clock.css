@@ -6,9 +6,12 @@
     color: lightslategray;
     font-weight: bold;
     background-color: #f0f0f0;
-    border: 2px solid #330033;
+    border-top: 1px solid #031325;
+    border-right: 1px solid #031325;
+    border-bottom: 2px solid #031325;
+    border-left: 2px solid #031325;
     border-radius: 21px;
-    box-shadow: -3px 3px 6px #330033;
+    box-shadow: -3px 3px 6px #031325;
     position: relative;
     z-index: 10;
     cursor: pointer;
@@ -16,7 +19,11 @@
 .clock:hover {
     background-color: darkgrey;
     color: #121212;
-    box-shadow: -3px 3px 6px #222;
+    border-top: 1px solid #031325;
+    border-right: 1px solid #031325;
+    border-bottom: 2px solid #031325;
+    border-left: 2px solid #031325;
+    box-shadow: -2px 2px 3px #031325;
 }
 .clock::after {
     content: none;

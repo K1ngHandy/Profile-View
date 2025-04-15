@@ -6,7 +6,8 @@ import {
 	instagramIconColor,
 	threadsIconBlack,
 	indeedIconBlue,
-	discordIconBlue,
+	redditIcon,
+	// discordIconBlue,
 	youtubeIcon,
 	blueskyIconBlue,
 } from '../assets/images';
@@ -56,10 +57,15 @@ const linksData = [
 		url: 'https://profile.indeed.com/p/stephenh-uaweqfx',
 	},
 	{
-		icon: discordIconBlue,
-		name: 'Discord',
-		url: `https://discord.com/channels/1140423533625888889/1140423534372470806`,
+		icon: redditIcon,
+		name: 'Reddit',
+		url: `https://www.reddit.com/r/${username}/`,
 	},
+	// {
+	// 	icon: discordIconBlue,
+	// 	name: 'Discord',
+	// 	url: `https://discord.com/channels/1140423533625888889/1140423534372470806`,
+	// },
 	{
 		icon: threadsIconBlack,
 		name: 'Threads',

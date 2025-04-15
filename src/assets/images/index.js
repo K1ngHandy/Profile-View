@@ -7,7 +7,8 @@ import whatsappIconGreen from './whatsapp-icon-green.png';
 import instagramIconColor from './instagram-icon-color.png';
 import threadsIconBlack from './threads-icon-black.png';
 import indeedIconBlue from './indeed-icon-blue.png';
-import discordIconBlue from './discord-icon-blue.svg';
+import redditIcon from './reddit-icon.png';
+// import discordIconBlue from './discord-icon-blue.svg';
 import youtubeIcon from './youtube-icon.png';
 import blueskyIconBlue from './bluesky-icon-blue.png';
 
@@ -21,7 +22,8 @@ export {
 	instagramIconColor,
 	threadsIconBlack,
 	indeedIconBlue,
-	discordIconBlue,
+	redditIcon,
+	// discordIconBlue,
 	youtubeIcon,
 	blueskyIconBlue,
 };
