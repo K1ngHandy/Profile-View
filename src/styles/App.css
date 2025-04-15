@@ -26,7 +26,6 @@ body {
 
 body.dark-mode {
   background-color: #494949;
-  color: #f5f5f5;
 }
 body.light-mode {
   background-color: lightgray;

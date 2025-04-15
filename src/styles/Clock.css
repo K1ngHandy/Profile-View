@@ -7,11 +7,16 @@
     font-weight: bold;
     background-color: #f0f0f0;
     border: 2px solid #330033;
-    border-radius: 30px;
-    box-shadow: -4px 4px 6px #330033;
+    border-radius: 21px;
+    box-shadow: -3px 3px 6px #330033;
     position: relative;
     z-index: 10;
     cursor: pointer;
+}
+.clock:hover {
+    background-color: darkgrey;
+    color: #121212;
+    box-shadow: -3px 3px 6px #222;
 }
 .clock::after {
     content: none;
@@ -29,6 +34,16 @@
 .clock.active::after {
     opacity: 1;
 }
+
+body.dark-mode .clock {
+    background-color: lightsteelblue;
+    color: #121212;
+}
+body.dark-mode .clock:hover {
+    background-color: #333;
+    color: lightgray;
+}
+
 blink {
     animation: blink 1s infinite;
 }

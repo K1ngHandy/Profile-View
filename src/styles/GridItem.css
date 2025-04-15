@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #555;
     border-radius: 33%;
     width: 100px;
     height: 100px;
@@ -13,7 +12,10 @@
 }
 
 body.dark-mode .grid-item {
-    background-color: #999999;
+    background-color: lightsteelblue;
+}
+body.dark-mode .grid-item:hover {
+    background-color: steelblue;
 }
 
 .grid-item:hover {
@@ -22,8 +24,8 @@ body.dark-mode .grid-item {
     border: solid 2.1px #440044;
 }
 .grid-item.active {
-    border: solid 2.1px steelblue;
-    background-color: steelblue;
+    /* border: solid 2.1px #440044; */
+    /* background-color: steelblue; */
     transform: scale(1.2);
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
