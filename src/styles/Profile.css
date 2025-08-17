@@ -1,0 +1,10 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 21px;
+    background-color: lightsteelblue;
+    width: 81%;
+    border-radius: 33px;
+}

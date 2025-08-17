@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import GridContainer from './GridContainer.js';
 import Clock from './Clock.js';
-import Music from './Music.js';
+import Profile from './Profile.js';
 import Footer from './Footer.js';
 import '../styles/Main.css';
 
@@ -33,15 +33,13 @@ function Main() {
 				onMouseOut={handleMouseOut}
 				active={active === 'clock'}
 			/>
-			<br />
-			<Music
-				id="music"
-				onMouseOver={() => handleMouseOver('music')}
+			<Profile
+				id="profile"
+				onMouseOver={handleMouseOver}
 				onMouseOut={handleMouseOut}
 				onClick={handleClick}
-				active={active === 'music'}
+				active={active}
 			/>
-			<br />
 			<GridContainer
 				onMouseOver={handleMouseOver}
 				onMouseOut={handleMouseOut}

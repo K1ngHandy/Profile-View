@@ -27,11 +27,6 @@
     z-index: 2;
     text-shadow: -2px -2px 2px steelblue;
 }
-.header h2 {
-    color: lightsteelblue;
-    font-weight: bold;  
-    
-}
 .header p {
     color: lightsteelblue;
     font-weight: bold;

@@ -7,6 +7,7 @@ Dark mode enabled
     ## Icon
   ## Main
     ## Clock
+    ## Profile
     ## Music link
     ## GridContainer
   ## Footer

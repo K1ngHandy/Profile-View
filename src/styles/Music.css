@@ -1,8 +1,8 @@
 .music-container {
     display: flex;
     align-items: center;
-    background-color: lightsteelblue;
-    margin-top: 15px;
+    background-color: lightgray;
+    margin: 15px auto;
     gap: 12px;
     font-size: 0.9rem;
     border-top: solid 2px #f0f0f0;
@@ -13,7 +13,7 @@
     border-radius: 45px;
 }
 .music-container.active {
-    background-color: #f0f0f0;
+    background-color: lightgray;
     cursor: pointer;
     border-top: solid 1px lightsteelblue;
     border-right: solid 1px lightsteelblue;
@@ -32,7 +32,6 @@ body.dark-mode .music-container {
     border-left: solid 1px lightslategray;
 }
 body.dark-mode .music-container:hover {
-    background-color: slategray;
     color: #222;
     box-shadow: -3px 3px 3px #333;
     border-top: solid 1px #333;
