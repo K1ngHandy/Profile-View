@@ -3,9 +3,9 @@
     max-width: 45%;
     margin: 0 auto;
     padding: 15px;
-    color: lightslategray;
+    color: #333;
     font-weight: bold;
-    background-color: #f0f0f0;
+    background-color: lightgray;
     border-top: 1px solid #031325;
     border-right: 1px solid #031325;
     border-bottom: 2px solid #031325;
@@ -17,8 +17,8 @@
     cursor: pointer;
 }
 .clock:hover {
-    background-color: darkgrey;
-    color: #121212;
+    background-color: slategray;
+    color: #222222;
     border-top: 1px solid #031325;
     border-right: 1px solid #031325;
     border-bottom: 2px solid #031325;
@@ -43,12 +43,11 @@
 }
 
 body.dark-mode .clock {
-    background-color: lightsteelblue;
+    background-color: gray;
     color: #121212;
 }
 body.dark-mode .clock:hover {
-    background-color: #333;
-    color: lightgray;
+    background-color: slategray;
 }
 
 blink {

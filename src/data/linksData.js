@@ -1,5 +1,5 @@
 import {
-	rootIcon,
+	musicIcon,
 	githubIconBlack,
 	tiktokIconBlack,
 	whatsappIconGreen,
@@ -7,17 +7,16 @@ import {
 	threadsIconBlack,
 	indeedIconBlue,
 	redditIcon,
-	// discordIconBlue,
 	youtubeIcon,
 	blueskyIconBlue,
 } from '../assets/images';
 
 export const username = 'K1ngHandy';
 export const musicLink = {
-	icon: rootIcon,
-	name: 'Roots',
-	alt: 'Roots track',
-	url: 'https://ditto.fm/roots-k1nghandy',
+	icon: musicIcon,
+	name: 'Phrasing',
+	alt: 'K1ngHandy - Phrasing',
+	url: 'https://www.youtube.com/watch?v=O2GVLF2Ygjs',
 };
 
 const linksData = [

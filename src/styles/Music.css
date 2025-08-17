@@ -13,7 +13,8 @@
     border-radius: 45px;
 }
 .music-container.active {
-    background-color: lightgray;
+    color: #222222;
+    background-color: slategray;
     cursor: pointer;
     border-top: solid 1px lightsteelblue;
     border-right: solid 1px lightsteelblue;
@@ -23,7 +24,7 @@
 }
 
 body.dark-mode .music-container {
-    background-color:lightslategray;
+    background-color: gray;
     color: #131313;
     box-shadow: -3px 3px 3px #330033;
     border-top: solid 2px lightslategray;
@@ -32,6 +33,7 @@ body.dark-mode .music-container {
     border-left: solid 1px lightslategray;
 }
 body.dark-mode .music-container:hover {
+    background-color: slategray;
     color: #222;
     box-shadow: -3px 3px 3px #333;
     border-top: solid 1px #333;

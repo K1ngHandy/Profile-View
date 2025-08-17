@@ -59,6 +59,7 @@ function Music(props) {
 						top: `${previewPosition.y}px`,
 					}}
 				>
+					<p>Click to listen:</p>
 					<h4>
 						{username} - {musicLink.name}
 					</h4>
@@ -76,7 +77,6 @@ function Music(props) {
 							onError={handleImageError}
 						/>
 					)}
-					<p>Click to listen</p>
 				</div>
 			)}
 		</>

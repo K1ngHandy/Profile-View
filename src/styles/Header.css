@@ -20,12 +20,12 @@
     z-index: -1;
 }
 .header h1 {
-    color: #bca153;
+    color: #caad59;
     font-weight: bolder;
     font-size: xxx-large;
     position: relative;
     z-index: 2;
-    text-shadow: -2px -2px 2px steelblue;
+    text-shadow: -1px -1px 1px lightslategray;
 }
 .header p {
     color: lightsteelblue;
