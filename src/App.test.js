@@ -26,6 +26,21 @@ jest.mock(
 describe('App component', () => {
 	beforeEach(() => {
 		jest.clearAllMocks();
+
+		// Mock window.matchMedia
+		Object.defineProperty(window, 'matchMedia', {
+			writable: true,
+			value: jest.fn().mockImplementation((query) => ({
+				matches: false,
+				media: query,
+				onchange: null,
+				addListener: jest.fn(), // deprecated
+				removeListener: jest.fn(), // deprecated
+				addEventListener: jest.fn(),
+				removeEventListener: jest.fn(),
+				dispatchEvent: jest.fn(),
+			})),
+		});
 	});
 
 	test('renders initial loading state', async () => {
@@ -54,7 +69,9 @@ describe('App component', () => {
 		render(<App />);
 
 		await waitFor(() => {
-			expect(screen.getByText('Error fetching data.')).toBeInTheDocument();
+			expect(
+				screen.getByText('Error fetching data.')
+			).toBeInTheDocument();
 		});
 	});
 });

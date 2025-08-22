@@ -9,7 +9,7 @@ function Header(props) {
 		<header className="header">
 			<hr className="divider" />
 			<h1>{company} </h1>
-			<p>🧭 {location}</p>
+			<p id="location">🧭 {location}</p>
 			<img
 				src={logoLight}
 				className="App-logo bounce"
