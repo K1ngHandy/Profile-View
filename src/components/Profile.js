@@ -7,34 +7,38 @@ function Profile(props) {
 
 	return (
 		<div className="profile-container">
-			<div className="profile-content">
+			<section className="profile profile-intro">
 				<h1>My name is Steve Handy.</h1>
 				<p>
 					Full Stack web developer with a solid foundation in Git,
 					HTML, CSS, JavaScript, Python, React, Swift, Node.js,
 					Material UI, and other modern UI frameworks.
-					<p>
-						Currently advancing expertise on my coding journey with:{' '}
-						<br />
-						<br /> Computer Science at{' '}
-						<a
-							href="https://www.wcupa.edu/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							West Chester University of Pennsylvania <br />
-						</a>
-						Full Stack Web Development at{' '}
-						<a
-							href="https://www.bloomtech.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Bloom Institute of Technology
-						</a>
-					</p>
 				</p>
-			</div>
+			</section>
+
+			<section className="profile profile-education">
+				<h4>Currently advancing expertise with: </h4>
+				<p>
+					Computer Science at{' '}
+					<a
+						href="https://www.wcupa.edu/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						West Chester University of Pennsylvania
+					</a>
+				</p>
+				<p>
+					Full Stack Web Development at{' '}
+					<a
+						href="https://www.bloomtech.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Bloom Institute of Technology
+					</a>
+				</p>
+			</section>
 			<Music
 				id={id}
 				onMouseOver={() => onMouseOver('music')}

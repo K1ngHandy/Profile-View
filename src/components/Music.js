@@ -34,7 +34,7 @@ function Music(props) {
 
 	return (
 		<>
-			<div
+			<section
 				id={id}
 				className={`music-container ${active ? 'active' : ''}`}
 				onMouseOver={() => onMouseOver('music')}
@@ -48,10 +48,10 @@ function Music(props) {
 					alt={musicLink.alt}
 				/>
 				<h3>🎶 {musicLink.name}</h3>
-			</div>
+			</section>
 
 			{showPreview && (
-				<div
+				<section
 					className="music-preview"
 					style={{
 						position: 'fixed',
@@ -77,7 +77,7 @@ function Music(props) {
 							onError={handleImageError}
 						/>
 					)}
-				</div>
+				</section>
 			)}
 		</>
 	);

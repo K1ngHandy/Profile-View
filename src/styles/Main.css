@@ -17,6 +17,11 @@ main {
     width: 100%;
 }
 
+.profile {
+    width: 75%;
+    margin: auto;
+}
+
 .divider {
     border: solid 0.12rem lightsteelblue;
     background-color: darkslategray;
