@@ -8,7 +8,7 @@ function Profile(props) {
 	return (
 		<div className="profile-container">
 			<section className="profile profile-intro">
-				<h1>My name is Steve Handy.</h1>
+				<h2>My name is Steve Handy.</h2>
 				<p>
 					Full Stack web developer with a solid foundation in Git,
 					HTML, CSS, JavaScript, Python, React, Swift, Node.js,
