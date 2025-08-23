@@ -9,7 +9,20 @@ function Header(props) {
 		<header className="header">
 			<hr className="divider" />
 			<h1>{company} </h1>
-			<p id="location">🧭 {location}</p>
+			<p
+				id="location"
+				style={{ cursor: 'pointer' }}
+				onClick={() =>
+					window.open(
+						`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+							location
+						)}`,
+						'_blank'
+					)
+				}
+			>
+				🧭 {location}
+			</p>
 			<img
 				src={logoLight}
 				className="App-logo bounce"
