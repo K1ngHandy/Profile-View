@@ -2,7 +2,8 @@ import React from 'react';
 import '../styles/GridItem.css';
 
 function GridItem(props) {
-	const { id, active, onClick, mouseOver, mouseOut, title, icon, name } = props;
+	const { id, active, onClick, mouseOver, mouseOut, title, icon, name, alt } =
+		props;
 
 	return (
 		<button
@@ -15,7 +16,7 @@ function GridItem(props) {
 		>
 			<img
 				src={icon}
-				alt={name}
+				alt={alt}
 				className="icons"
 			/>
 			<span className="active-text">{name}</span>

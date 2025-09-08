@@ -3,7 +3,16 @@ import Music from './Music.js';
 import '../styles/Profile.css';
 
 function Profile(props) {
-	const { id, onMouseOver, onMouseOut, onClick, active } = props;
+	const {
+		id,
+		onMouseOver,
+		onMouseOut,
+		onClick,
+		active,
+		wcupa,
+		bloom,
+		music,
+	} = props;
 
 	return (
 		<div className="profile-container">
@@ -17,35 +26,48 @@ function Profile(props) {
 			</section>
 
 			<section className="profile profile-education">
-				<h4>Currently advancing expertise with: </h4>
-				<p>
-					Computer Science at{' '}
-					<a
-						href="https://www.wcupa.edu/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						West Chester University of Pennsylvania
-					</a>
-				</p>
-				<p>
-					Full Stack Web Development at{' '}
-					<a
-						href="https://www.bloomtech.com/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Bloom Institute of Technology
-					</a>
-				</p>
+				<h3>Currently advancing expertise with:</h3>
+				<h4>Computer Science at</h4>
+				<a
+					href={wcupa?.url}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img
+						src={wcupa?.icon}
+						className="wcupa-icon"
+						alt={wcupa?.alt}
+					/>
+				</a>
+
+				<h4>Full Stack Web Development at</h4>
+				<a
+					href="https://www.bloomtech.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img
+						src={bloom?.icon}
+						className="bloom-icon"
+						alt={bloom?.alt}
+					/>
+				</a>
 			</section>
-			<Music
-				id={id}
-				onMouseOver={() => onMouseOver('music')}
-				onMouseOut={onMouseOut}
-				onClick={onClick}
-				active={active === 'music'}
-			/>
+			<section className="profile-music">
+				<h3>Music Development:</h3>
+				<Music
+					id={id}
+					onMouseOver={() => onMouseOver('music')}
+					onMouseOut={onMouseOut}
+					onClick={onClick}
+					active={active === 'music'}
+					username={music?.username}
+					icon={music?.icon}
+					name={music?.name}
+					alt={music?.alt}
+					url={music?.url}
+				/>
+			</section>
 		</div>
 	);
 }

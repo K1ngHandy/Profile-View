@@ -4,7 +4,7 @@ import GridItem from './GridItem';
 import linksData from '../data/linksData';
 
 function GridContainer(props) {
-	const { mouseOver, mouseOut, onClick, active } = props;
+	const { id, mouseOver, mouseOut, onClick, active } = props;
 
 	return (
 		<div className="grid-container">
@@ -21,6 +21,7 @@ function GridContainer(props) {
 						onMouseOut={mouseOut}
 						title={link.name}
 						icon={link.icon}
+						alt={link.alt}
 						name={link.name}
 					/>
 				);

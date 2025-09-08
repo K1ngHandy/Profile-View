@@ -29,7 +29,7 @@
     margin-top: 9px;
     margin-bottom: 12px;
 }
-.header #location {
+.header .location {
     background-color: lightsteelblue;
     font-weight: bold;
     position: relative;
@@ -54,7 +54,7 @@
         transform: translateY(-15px);
     }
 }
-.App-logo {
+.app-logo {
     height: 33vmin;
     border-radius: 50%;
     padding: 0.3vh;

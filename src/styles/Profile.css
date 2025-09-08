@@ -8,3 +8,24 @@
     max-width: 75%;
     border-radius: 33px;
 }
+
+section.profile {
+    margin: 15px auto;
+    text-align: center;
+    max-width: 63vmax;
+}
+
+.wcupa-icon {
+    height: 100px;
+    width: 150px;
+    border: 1px solid #333;
+    border-radius: 12px;
+}
+
+.bloom-icon {
+    height: 62.5px;
+    width: 250px;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 12px;
+}

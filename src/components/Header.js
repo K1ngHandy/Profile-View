@@ -1,16 +1,17 @@
 import React from 'react';
 import '../styles/Header.css';
-import { logoLight } from '../assets/images';
+// import { logoLight } from '../assets/images';
 
 function Header(props) {
-	const { company, location } = props.data;
+	const { id, username, location, logo, alt } = props.profile;
 
 	return (
 		<header className="header">
 			<hr className="divider" />
-			<h1>{company} </h1>
+			<h1>{username}</h1>
 			<p
-				id="location"
+				className="location"
+				id={id}
 				style={{ cursor: 'pointer' }}
 				onClick={() =>
 					window.open(
@@ -24,9 +25,9 @@ function Header(props) {
 				🧭 {location}
 			</p>
 			<img
-				src={logoLight}
-				className="App-logo bounce"
-				alt="logo"
+				src={logo}
+				className="app-logo bounce"
+				alt={alt}
 			/>
 		</header>
 	);

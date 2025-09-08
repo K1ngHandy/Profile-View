@@ -31,3 +31,12 @@ body.light-mode {
   background-color: lightgray;
   color: #121212;
 }
+
+.error {
+  text-align: center;
+  color: crimson;
+  font-weight: bold;
+  font-size: larger;
+  margin: auto;
+  padding: 18px;
+}

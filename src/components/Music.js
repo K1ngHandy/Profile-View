@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
 import '../styles/Music.css';
-import { username, musicLink } from '../data/linksData';
 
 function Music(props) {
-	const { id, onMouseOver, onMouseOut, onClick, active } = props;
+	const {
+		id,
+		onMouseOver,
+		onMouseOut,
+		onClick,
+		active,
+		username,
+		icon,
+		name,
+		alt,
+		url,
+	} = props;
 	const [showPreview, setShowPreview] = useState(false);
 	const [previewPosition, setPreviewPosition] = useState({ x: 0, y: 0 });
 	const [previewError, setPreviewError] = useState(false);
@@ -40,18 +50,20 @@ function Music(props) {
 				onMouseOver={() => onMouseOver('music')}
 				onMouseMove={handleMouseMove}
 				onMouseOut={handleMouseLeave}
-				onClick={() => onClick(musicLink.url)}
+				onClick={() => onClick(url)}
 			>
 				<img
+					id={id === 'music'}
 					className="music-icon"
-					src={musicLink.icon}
-					alt={musicLink.alt}
+					src={icon}
+					alt={alt}
 				/>
-				<h3>🎶 {musicLink.name}</h3>
+				<h3>🎶 {name}</h3>
 			</section>
 
 			{showPreview && (
 				<section
+					id={id === 'music'}
 					className="music-preview"
 					style={{
 						position: 'fixed',
@@ -61,18 +73,18 @@ function Music(props) {
 				>
 					<p>Click to listen:</p>
 					<h4>
-						{username} - {musicLink.name}
+						{username} - {name}
 					</h4>
 					{previewError ? (
 						<img
-							src={musicLink.icon}
-							alt={`${musicLink.name} icon`}
+							src={icon}
+							alt={alt}
 							className="preview-image fallback"
 						/>
 					) : (
 						<img
-							src={getPreviewUrl(musicLink.url)}
-							alt={`Preview of ${musicLink.name}`}
+							src={getPreviewUrl(url)}
+							alt={`Preview of ${name}`}
 							className="preview-image"
 							onError={handleImageError}
 						/>
