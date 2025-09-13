@@ -15,6 +15,27 @@ section.profile {
     max-width: 63vmax;
 }
 
+.profile-education {
+    text-align: center;
+}
+
+.education-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2.1rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 1.2rem;
+}
+
+.education-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+    margin-bottom: 0.5rem;
+}
+
 .wcupa-icon {
     height: 100px;
     width: 150px;
@@ -28,4 +49,26 @@ section.profile {
     padding: 12px;
     border: 1px solid #333;
     border-radius: 12px;
+}
+
+/* mobile/tablet view */
+@media (max-width: 768px) {
+    .education-row {
+        flex-direction: column;
+        gap: 0.9rem;
+        align-items: stretch;
+    }
+
+    .education-section {
+        min-width: unset;
+    }
+
+    .education-section h4 {
+        margin-bottom: 0.45rem;
+    }
+    .education-section a img {
+        width: 120px;
+        height: auto;
+        margin-top: 0.3rem;
+    }
 }

@@ -24,34 +24,38 @@ function Profile(props) {
 					Material UI, and other modern UI frameworks.
 				</p>
 			</section>
-
 			<section className="profile profile-education">
 				<h3>Currently advancing expertise with:</h3>
-				<h4>Computer Science at</h4>
-				<a
-					href={wcupa?.url}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<img
-						src={wcupa?.icon}
-						className="wcupa-icon"
-						alt={wcupa?.alt}
-					/>
-				</a>
-
-				<h4>Full Stack Web Development at</h4>
-				<a
-					href="https://www.bloomtech.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<img
-						src={bloom?.icon}
-						className="bloom-icon"
-						alt={bloom?.alt}
-					/>
-				</a>
+				<div className="education-row">
+					<div className="education-section">
+						<h4>Computer Science at</h4>
+						<a
+							href={wcupa?.url}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={wcupa?.icon}
+								className="wcupa-icon"
+								alt={wcupa?.alt}
+							/>
+						</a>
+					</div>
+					<div className="education-section">
+						<h4>Full Stack Web Development at</h4>
+						<a
+							href="https://www.bloomtech.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={bloom?.icon}
+								className="bloom-icon"
+								alt={bloom?.alt}
+							/>
+						</a>
+					</div>
+				</div>
 			</section>
 			<section className="profile-music">
 				<h3>Music Development:</h3>
