@@ -24,8 +24,6 @@ body.dark-mode .grid-item:hover {
     border: solid 2.1px #440044;
 }
 .grid-item.active {
-    /* border: solid 2.1px #440044; */
-    /* background-color: steelblue; */
     transform: scale(1.2);
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }

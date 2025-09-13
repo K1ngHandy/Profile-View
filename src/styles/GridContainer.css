@@ -1,8 +1,8 @@
 .grid-container {
     display: grid;
     margin-top: -3px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 21px;
     padding: calc(21px + 2vw);
     justify-items: center;
@@ -12,14 +12,12 @@
     max-height: 100%;
     overflow: auto;
     z-index: 1;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
 }
 
 @media (max-width: 1200px) {
     .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
         gap: 15px;
     }
 }

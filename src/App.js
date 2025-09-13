@@ -12,8 +12,7 @@ function App() {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState('');
 
-	const { id: profileId, username, location, logo, alt: logoAlt } = profile;
-	const { id, icon, name, alt, url } = linksData;
+	const { username } = profile;
 
 	const gravatar = `https://api.gravatar.com/v3/profiles/${username}`;
 

@@ -1,14 +1,13 @@
 import React from 'react';
 import '../styles/GridContainer.css';
 import GridItem from './GridItem';
-import linksData from '../data/linksData';
 
 function GridContainer(props) {
-	const { id, mouseOver, mouseOut, onClick, active } = props;
+	const { linksData, mouseOver, mouseOut, onClick, active } = props;
 
 	return (
 		<div className="grid-container">
-			{linksData.slice(0, 9).map((link, idx) => {
+			{linksData.slice(1, 9).map((link, idx) => {
 				const id = `button-${idx}`;
 
 				return (
@@ -21,8 +20,8 @@ function GridContainer(props) {
 						onMouseOut={mouseOut}
 						title={link.name}
 						icon={link.icon}
-						alt={link.alt}
 						name={link.name}
+						alt={link.alt}
 					/>
 				);
 			})}
