@@ -1,39 +1,38 @@
-.profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.profile-container-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    align-items: start;
     margin: auto;
     padding: 21px 33px;
     background-color: lightsteelblue;
-    max-width: 75%;
+    max-width: 90vw;
     border-radius: 33px;
 }
 
-section.profile {
-    margin: 15px auto;
-    text-align: center;
-    max-width: 63vmax;
-}
-
-.profile-education {
-    text-align: center;
-}
-
-.education-row {
-    display: flex;
-    flex-direction: row;
-    gap: 2.1rem;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 1.2rem;
-}
-
-.education-section {
+.profile-grid-column {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
     align-items: center;
-    min-width: 180px;
-    margin-bottom: 0.5rem;
+    justify-content: flex-start;
+}
+.profile-grid-column.left {
+    grid-column: 1;
+}
+.profile-main-content {
+    grid-column: 2;
+}
+.profile-grid-column.right {
+    grid-column: 3;
+}
+
+.profile-music {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .wcupa-icon {
@@ -51,24 +50,40 @@ section.profile {
     border-radius: 12px;
 }
 
-/* mobile/tablet view */
-@media (max-width: 768px) {
-    .education-row {
+@media (max-width: 900px) {
+    .profile-container-grid {
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 1rem;
+        padding: 12px 6vw;
+    }
+
+    .profile-music {
+        width: 81%;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-container-grid {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: 6vw 2vw;
+        gap: 0.5rem;
+    }
+
+    .profile-grid-column {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 0.9rem;
-        align-items: stretch;
+        margin-bottom: 1rem;
     }
 
-    .education-section {
-        min-width: unset;
+    .profile-main-content {
+        width: 100%;
     }
 
-    .education-section h4 {
-        margin-bottom: 0.45rem;
-    }
-    .education-section a img {
-        width: 120px;
-        height: auto;
-        margin-top: 0.3rem;
+    .profile-music {
+        width: 78%;
     }
 }

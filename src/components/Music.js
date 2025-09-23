@@ -58,7 +58,7 @@ function Music(props) {
 					src={icon}
 					alt={alt}
 				/>
-				<h3>🎶 {name}</h3>
+				<h3>🎶{name}</h3>
 			</section>
 
 			{showPreview && (

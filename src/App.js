@@ -11,6 +11,7 @@ function App() {
 	const [data, setData] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState('');
+	const [active, setActive] = useState(false);
 
 	const { username } = profile;
 
@@ -40,10 +41,14 @@ function App() {
 				<Header
 					profile={profile}
 					data={data}
+					active={active}
+					setActive={setActive}
 				/>
 				<Main
 					profile={profile}
 					linksData={linksData}
+					active={active}
+					setActive={setActive}
 				/>
 				<SpeedInsights />
 			</div>

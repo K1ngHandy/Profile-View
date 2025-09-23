@@ -3,8 +3,10 @@
     align-items: center;
     background-color: lightgray;
     margin: 15px auto;
+    padding: 3px;
+    height: 30px;
     gap: 12px;
-    font-size: 0.9rem;
+    font-size: 0.72rem;
     border-top: solid 2px #f0f0f0;
     border-right: solid 2px #f0f0f0;
     border-bottom: solid 1px #f0f0f0;
@@ -24,8 +26,8 @@
 }
 
 body.dark-mode .music-container {
-    background-color: gray;
     color: #131313;
+    background-color: gray;
     box-shadow: -3px 3px 3px #330033;
     border-top: solid 2px lightslategray;
     border-right: solid 2px lightslategray;
@@ -33,8 +35,8 @@ body.dark-mode .music-container {
     border-left: solid 1px lightslategray;
 }
 body.dark-mode .music-container:hover {
-    background-color: slategray;
     color: #222;
+    background-color: slategray;
     box-shadow: -3px 3px 3px #333;
     border-top: solid 1px #333;
     border-right: solid 1px #333;
@@ -44,7 +46,8 @@ body.dark-mode .music-container:hover {
 
 .music-icon {
     vertical-align: middle;
-    height: 105px;
+    height: 81px;
+    padding: 15px;
     margin: 0 5px;
     object-fit: cover;
 }
@@ -55,7 +58,6 @@ body.dark-mode .music-container:hover {
 .music-container h3 {
     font-size: 2em;
     margin: 0;
-    padding: 15px;
     display: inline-block;
 }
 
