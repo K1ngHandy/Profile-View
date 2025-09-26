@@ -25,7 +25,7 @@ function Header({ profile, active, setActive }) {
 			</div>
 			<p
 				className="location"
-				id={id}
+				id={id ? id : undefined}
 				style={{ cursor: 'pointer' }}
 				onClick={() =>
 					window.open(

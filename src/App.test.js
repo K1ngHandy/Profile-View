@@ -70,7 +70,7 @@ describe('App component', () => {
 
 		await waitFor(() => {
 			expect(
-				screen.getByText('Error fetching data.')
+				screen.getByText('API requests exceeded. Return later...')
 			).toBeInTheDocument();
 		});
 	});
