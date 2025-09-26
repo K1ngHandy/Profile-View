@@ -36,7 +36,6 @@ src/
 │   ├── Clock.js        # Live clock component
 │   ├── Profile.js      # Profile display component
 │   ├── Music.js        # Featured music link
-│   ├── GridContainer.js # Social links container
 │   ├── GridItem.js     # Individual social link items
 │   └── Footer.js       # Footer with coder info
 ├── context/

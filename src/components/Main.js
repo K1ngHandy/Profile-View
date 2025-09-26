@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-// import GridContainer from './GridContainer.js';
+import React from 'react';
 import Clock from './Clock.js';
 import Profile from './Profile.js';
 import Footer from './Footer.js';
