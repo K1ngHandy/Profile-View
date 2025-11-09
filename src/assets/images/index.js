@@ -1,5 +1,5 @@
 import logoLight from './LionCoinToken.png';
-import musicIcon from './root-icon.png';
+import musicIcon from './music-icon.png';
 import githubIconBlack from './github-icon-black.png';
 import githubIconWhite from './github-icon-white.png';
 import tikTokIconBlack from './tiktok-icon-black.png';
