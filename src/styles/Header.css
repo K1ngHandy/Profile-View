@@ -106,7 +106,30 @@ body.dark-mode .username-container {
 }
 
 @media (max-width: 600px) {
-    .location {
+    .header {
+        padding-top: 40px;
+        min-height: auto;
+    }
+
+    .app-logo {
+        position: static;
+        display: block;
+        margin: 0 auto 12px;
+        height: 20vmin;
+    }
+
+    .username-container {
+        width: 90%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .username-container h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .header .location {
         font-size: 0.8rem;
         padding: 3px 6px;
     }
