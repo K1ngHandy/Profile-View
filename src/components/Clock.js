@@ -1,4 +1,6 @@
+/* global globalThis */
 import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Clock.css';
 
 function Clock(props) {
@@ -25,22 +27,22 @@ function Clock(props) {
 	// Decide when the clock should float (small screens)
 	useEffect(() => {
 		const updateFloating = () => {
-			const shouldFloat = window.innerWidth <= 768;
+			const shouldFloat = globalThis.innerWidth <= 768;
 			setIsFloating(shouldFloat);
 			if (shouldFloat) {
 				setPosition((prev) => {
 					if (prev.top !== null && prev.left !== null) return prev;
 					return {
-						top: window.innerHeight - 120,
-						left: window.innerWidth - 220,
+						top: globalThis.innerHeight - 120,
+						left: globalThis.innerWidth - 220,
 					};
 				});
 			}
 		};
 
 		updateFloating();
-		window.addEventListener('resize', updateFloating);
-		return () => window.removeEventListener('resize', updateFloating);
+		globalThis.addEventListener('resize', updateFloating);
+		return () => globalThis.removeEventListener('resize', updateFloating);
 	}, []);
 
 	// Hide while scrolling, reappear when scrolling stops (mobile floating only)
@@ -54,9 +56,9 @@ function Clock(props) {
 				setHiddenOnScroll(false);
 			}, 250);
 		};
-		window.addEventListener('scroll', handleScroll);
+		globalThis.addEventListener('scroll', handleScroll);
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
+			globalThis.removeEventListener('scroll', handleScroll);
 			if (timeoutId) clearTimeout(timeoutId);
 		};
 	}, [isFloating]);
@@ -68,7 +70,7 @@ function Clock(props) {
 		const handleMove = (event) => {
 			let clientX;
 			let clientY;
-			if (event.touches && event.touches[0]) {
+			if (event.touches?.[0]) {
 				clientX = event.touches[0].clientX;
 				clientY = event.touches[0].clientY;
 			} else {
@@ -77,12 +79,10 @@ function Clock(props) {
 			}
 
 			const node = clockRef.current;
-			const elementWidth =
-				node && node.offsetWidth ? node.offsetWidth : 0;
-			const elementHeight =
-				node && node.offsetHeight ? node.offsetHeight : 0;
-			const maxLeft = Math.max(window.innerWidth - elementWidth, 0);
-			const maxTop = Math.max(window.innerHeight - elementHeight, 0);
+			const elementWidth = node?.offsetWidth ?? 0;
+			const elementHeight = node?.offsetHeight ?? 0;
+			const maxLeft = Math.max(globalThis.innerWidth - elementWidth, 0);
+			const maxTop = Math.max(globalThis.innerHeight - elementHeight, 0);
 
 			let nextLeft = clientX - dragOffset.x;
 			let nextTop = clientY - dragOffset.y;
@@ -102,16 +102,18 @@ function Clock(props) {
 			setIsDragging(false);
 		};
 
-		window.addEventListener('mousemove', handleMove);
-		window.addEventListener('mouseup', handleUp);
-		window.addEventListener('touchmove', handleMove, { passive: false });
-		window.addEventListener('touchend', handleUp);
+		globalThis.addEventListener('mousemove', handleMove);
+		globalThis.addEventListener('mouseup', handleUp);
+		globalThis.addEventListener('touchmove', handleMove, {
+			passive: false,
+		});
+		globalThis.addEventListener('touchend', handleUp);
 
 		return () => {
-			window.removeEventListener('mousemove', handleMove);
-			window.removeEventListener('mouseup', handleUp);
-			window.removeEventListener('touchmove', handleMove);
-			window.removeEventListener('touchend', handleUp);
+			globalThis.removeEventListener('mousemove', handleMove);
+			globalThis.removeEventListener('mouseup', handleUp);
+			globalThis.removeEventListener('touchmove', handleMove);
+			globalThis.removeEventListener('touchend', handleUp);
 		};
 	}, [isDragging, dragOffset, isFloating]);
 
@@ -154,12 +156,12 @@ function Clock(props) {
 	const handleDragStart = (event) => {
 		if (!isFloating || isClosed) return;
 		const target = event.target;
-		if (target && target.closest && target.closest('.clock-close')) {
+		if (target?.closest?.('.clock-close')) {
 			return;
 		}
 		let clientX;
 		let clientY;
-		if (event.touches && event.touches[0]) {
+		if (event.touches?.[0]) {
 			clientX = event.touches[0].clientX;
 			clientY = event.touches[0].clientY;
 		} else {
@@ -193,7 +195,8 @@ function Clock(props) {
 
 	return (
 		<>
-			<div
+			<button
+				type="button"
 				className={`clock ${active ? 'active' : ''} ${
 					isFloating ? 'clock-floating' : ''
 				} ${isHidden ? 'clock-hidden' : ''}`}
@@ -201,6 +204,8 @@ function Clock(props) {
 				style={floatingStyle}
 				onMouseOver={onMouseOver}
 				onMouseOut={onMouseOut}
+				onFocus={onMouseOver}
+				onBlur={onMouseOut}
 				onMouseDown={handleDragStart}
 				onTouchStart={handleDragStart}
 			>
@@ -213,10 +218,16 @@ function Clock(props) {
 				</button>
 				{timeFormat(clock)}
 				<span className="date-display">{dateFormat(clock)}</span>
-			</div>
+			</button>
 			<br />
 		</>
 	);
 }
+
+Clock.propTypes = {
+	onMouseOver: PropTypes.func,
+	onMouseOut: PropTypes.func,
+	active: PropTypes.bool,
+};
 
 export default Clock;

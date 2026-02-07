@@ -24,7 +24,7 @@ function App() {
 				setData(res.data);
 				setLoading(false);
 			} catch (err) {
-				// setData([]);
+				console.error('Error fetching gravatar profile', err);
 				setError('API requests exceeded. Return later...');
 				setLoading(false);
 			}
