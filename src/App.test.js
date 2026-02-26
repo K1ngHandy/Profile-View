@@ -1,7 +1,8 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import axios from 'axios';
 import App from './App';
+import Clock from './components/Clock';
 
 // Mock data
 const mockProfileData = {
@@ -20,7 +21,7 @@ jest.mock(
 			return null;
 		},
 	}),
-	{ virtual: true }
+	{ virtual: true },
 );
 
 describe('App component', () => {
@@ -70,8 +71,64 @@ describe('App component', () => {
 
 		await waitFor(() => {
 			expect(
-				screen.getByText('API requests exceeded. Return later...')
+				screen.getByText('API requests exceeded. Return later...'),
 			).toBeInTheDocument();
 		});
+	});
+});
+
+describe('Clock component viewport behavior', () => {
+	beforeEach(() => {
+		// Set a mobile-sized viewport
+		window.innerWidth = 375;
+		window.innerHeight = 667;
+	});
+
+	test('floating clock stays within viewport when dragged', () => {
+		const handleOver = jest.fn();
+		const handleOut = jest.fn();
+
+		render(
+			<Clock
+				onMouseOver={handleOver}
+				onMouseOut={handleOut}
+				active={false}
+			/>,
+		);
+
+		// Find the clock element via its text (time-like content will exist)
+		const clockElement = screen.getByText((content, element) => {
+			return element?.classList.contains('clock');
+		});
+
+		// Mock dimensions so our bounds calculation has non-zero size
+		Object.defineProperty(clockElement, 'offsetWidth', {
+			value: 150,
+			configurable: true,
+		});
+		Object.defineProperty(clockElement, 'offsetHeight', {
+			value: 80,
+			configurable: true,
+		});
+
+		// Start a drag near the current position
+		fireEvent.mouseDown(clockElement, { clientX: 300, clientY: 500 });
+
+		// Drag far outside the viewport bounds
+		fireEvent.mouseMove(window, { clientX: 5000, clientY: 5000 });
+		fireEvent.mouseUp(window);
+
+		const top = parseFloat(clockElement.style.top || '0');
+		const left = parseFloat(clockElement.style.left || '0');
+
+		// The element should be clamped within the viewport
+		expect(top).toBeGreaterThanOrEqual(0);
+		expect(left).toBeGreaterThanOrEqual(0);
+		expect(top).toBeLessThanOrEqual(
+			window.innerHeight - clockElement.offsetHeight,
+		);
+		expect(left).toBeLessThanOrEqual(
+			window.innerWidth - clockElement.offsetWidth,
+		);
 	});
 });

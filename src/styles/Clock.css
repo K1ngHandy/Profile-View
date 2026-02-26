@@ -87,3 +87,36 @@ blink {
     visibility: visible;
     opacity: 1;
 }
+
+.clock-floating {
+    position: fixed;
+    max-width: 80%;
+    font-size: 1.4em;
+    z-index: 1000;
+    bottom: 16px;
+    right: 16px;
+}
+
+.clock-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.clock-close {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 0.8em;
+    cursor: pointer;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .clock {
+        max-width: 80%;
+    }
+}

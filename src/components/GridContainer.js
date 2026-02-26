@@ -3,6 +3,7 @@ import '../styles/GridContainer.css';
 import GridItem from './GridItem';
 
 function GridContainer(props) {
+	// deprecated
 	const { linksData, mouseOver, mouseOut, onClick, active } = props;
 
 	return (

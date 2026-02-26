@@ -17,7 +17,7 @@ import {
 export const profile = {
 	id: 'profile',
 	username: 'K1ngHandy',
-	location: 'Barcelona, ES',
+	location: 'Downingtown, PA 🇺🇸',
 	logo: logoLight,
 	alt: 'K1ngHandy Logo',
 };
