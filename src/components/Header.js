@@ -44,6 +44,7 @@ function Header({ profile, active, setActive }) {
 							location,
 						)}`,
 						'_blank',
+						'noopener,noreferrer',
 					)
 				}
 			>
