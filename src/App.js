@@ -3,6 +3,7 @@ import axios from 'axios';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from './components/Header.js';
 import Main from './components/Main.js';
+import ScrollToTop from './components/ScrollToTop.js';
 import { ThemeProvider } from './context/ThemeContext.js';
 import linksData, { profile } from './data/linksData.js';
 import './styles/App.css';
@@ -51,6 +52,7 @@ function App() {
 					setActive={setActive}
 				/>
 				<SpeedInsights />
+				<ScrollToTop />
 			</div>
 		</ThemeProvider>
 	);
