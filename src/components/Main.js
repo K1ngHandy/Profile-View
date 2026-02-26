@@ -10,7 +10,7 @@ function Main({ profile, linksData, active, setActive }) {
 
 	const handleMouseOver = (id) => setActive(id);
 	const handleMouseOut = () => setActive(null);
-	const handleClick = (url) => window.open(url, '_blank');
+	const handleClick = (url) => window.open(url, '_blank', 'noopener,noreferrer');
 
 	const musicLink = linksData.find((link) => link.id === 'music');
 	const wcupaLink = linksData.find((link) => link.id === 'wcupa');

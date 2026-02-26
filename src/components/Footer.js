@@ -38,7 +38,7 @@ function Footer(props) {
 				{'Coded by: '}
 				<a
 					href={githubUrl || '#'}
-					target="blank"
+					target="_blank"
 					rel="noopener noreferrer"
 					className={`link ${active === footerId ? 'active' : ''}`}
 					onMouseOver={() => onMouseOver(footerId)}
