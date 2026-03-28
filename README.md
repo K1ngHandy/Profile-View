@@ -4,12 +4,11 @@
 [![React](https://img.shields.io/badge/React-19.0.0-blue.svg)](https://reactjs.org/)
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black.svg)](https://vercel.com/)
 
-A modern, responsive personal profile dashboard built with React. Display your social media links, current music, live clock, and profile information in an elegant interface with dark mode support.
+A modern, responsive personal profile dashboard built with React. Display your social media links, current music, and profile information in an elegant interface with dark mode support.
 
 ## ✨ Features
 
 - 🌓 **Dark/Light Mode Toggle** - Seamless theme switching
-- ⏰ **Live Clock Display** - Real-time date and time
 - 👤 **Dynamic Profile Integration** - Fetches profile data from Gravatar API
 - 🎵 **Featured Music Link** - Showcase your latest track
 - 🔗 **Social Media Grid** - Organized display of all your social platforms
@@ -33,7 +32,6 @@ src/
 ├── components/
 │   ├── Header.js       # App header with profile info
 │   ├── Main.js         # Main content wrapper
-│   ├── Clock.js        # Live clock component
 │   ├── Profile.js      # Profile display component
 │   ├── Music.js        # Featured music link
 │   ├── GridItem.js     # Individual social link items
