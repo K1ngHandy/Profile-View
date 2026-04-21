@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .app-logo {
     height: clamp(40px, 6vmin, 64px);
     width: auto;
@@ -9,5 +10,35 @@
         height: clamp(28px, 8vmin, 40px);
         width: auto;
         /* removed min-height, max-height, and any vmin-only height */
+=======
+@media (max-width: 600px) {
+    .username-container {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 10px;
+        width: 92%;
+        max-width: 360px;
+        padding: 10px 12px;
+        box-sizing: border-box;
+    }
+    .app-logo {
+        position: static;
+        flex: 0 0 auto;
+        height: 12vmin;
+        min-height: 44px;
+        max-height: 56px;
+        margin: 0;
+    }
+    .username-container h1 {
+        flex: 1 1 auto;
+        font-size: clamp(1.4rem, 6vw, 2rem);
+        text-align: left;
+        margin: 0;
+        line-height: 1.1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-width: 0;
+>>>>>>> parent of e0d3ef1 (Update .app-logo rule in Header.css for responsive design)
     }
 }
