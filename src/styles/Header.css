@@ -1,11 +1,13 @@
 .app-logo {
-  width: auto;
-  height: clamp(28px, 8vmin, 40px);
+    height: clamp(40px, 6vmin, 64px);
+    width: auto;
+    /* other existing properties */
 }
 
 @media (max-width: 600px) {
-  .app-logo {
-    width: auto;
-    height: clamp(28px, 8vmin, 40px);
-  }
+    .app-logo {
+        height: clamp(28px, 8vmin, 40px);
+        width: auto;
+        /* removed min-height, max-height, and any vmin-only height */
+    }
 }
