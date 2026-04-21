@@ -20,7 +20,7 @@ jest.mock(
 			return null;
 		},
 	}),
-	{ virtual: true },
+	{ virtual: true }
 );
 
 describe('App component', () => {
@@ -70,7 +70,7 @@ describe('App component', () => {
 
 		await waitFor(() => {
 			expect(
-				screen.getByText('API requests exceeded. Return later...'),
+				screen.getByText('API requests exceeded. Return later...')
 			).toBeInTheDocument();
 		});
 	});
