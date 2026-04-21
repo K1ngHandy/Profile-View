@@ -78,7 +78,7 @@ body.dark-mode .username-container {
     border-top: solid 2px slategray;
     border-right: solid 2px slategray;
     border-bottom: solid 1px slategray;
-    border-left: solid 1px slategray;
+    border-left: solid 2px slategray;
 }
 
 @keyframes bounce {
@@ -111,22 +111,39 @@ body.dark-mode .username-container {
         min-height: auto;
     }
 
-    .app-logo {
-        position: static;
-        display: block;
-        margin: 0 auto 12px;
-        height: 20vmin;
+    /*
+      Mobile layout: keep the avatar/logo and username on one line when possible.
+      This lets the username-container fit better on small screens.
+    */
+    .username-container {
+        width: 92%;
+        max-width: 360px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 10px 12px;
+        box-sizing: border-box;
     }
 
-    .username-container {
-        width: 90%;
-        max-width: 320px;
-        justify-content: center;
+    .app-logo {
+        position: static;
+        flex: 0 0 auto;
+        height: 12vmin;
+        min-height: 44px;
+        max-height: 56px;
+        margin: 0;
     }
 
     .username-container h1 {
-        font-size: 2rem;
-        text-align: center;
+        flex: 1 1 auto;
+        font-size: clamp(1.4rem, 6vw, 2rem);
+        text-align: left;
+        margin: 0;
+        line-height: 1.1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-width: 0;
     }
 
     .header .location {
