@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-.app-logo {
-    height: clamp(40px, 6vmin, 64px);
-    width: auto;
-    /* other existing properties */
-}
-
-@media (max-width: 600px) {
-    .app-logo {
-        height: clamp(28px, 8vmin, 40px);
-        width: auto;
-        /* removed min-height, max-height, and any vmin-only height */
-=======
 @media (max-width: 600px) {
     .username-container {
         justify-content: flex-start;
         flex-wrap: nowrap;
         gap: 10px;
-        width: 92%;
-        max-width: 360px;
+        width: 9%;
+        max-width: 36px;
         padding: 10px 12px;
         box-sizing: border-box;
     }
@@ -39,6 +26,5 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         min-width: 0;
->>>>>>> parent of e0d3ef1 (Update .app-logo rule in Header.css for responsive design)
     }
 }
