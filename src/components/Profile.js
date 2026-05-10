@@ -43,11 +43,11 @@ function Profile(props) {
 					/>
 				</section>
 				<section className="profile profile-intro">
-					<h2>My name is Steve Handy.</h2>
+					<h2>Steve Handy.</h2>
 					<p>
 						Full Stack web developer with a solid foundation in Git,
-						HTML, CSS, JavaScript, Python, React, Swift, Node.js,
-						Material UI, and other modern UI frameworks.
+						HTML, CSS, Java, JavaScript, Python, React, Swift,
+						Node.js, Material UI, and other modern UI frameworks.
 					</p>
 				</section>
 				<section className="profile profile-education">
