@@ -11,7 +11,6 @@ function Profile(props) {
 		onClick,
 		active,
 		onFocus,
-		onBlur,
 		wcupa,
 		bloom,
 		music,

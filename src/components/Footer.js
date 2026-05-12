@@ -5,7 +5,7 @@ import '../styles/Footer.css';
 import { githubIconWhite } from '../assets/images';
 
 function Footer(props) {
-	const { active, onMouseOver, onMouseOut, onFocus } = props;
+	const { active, onMouseOver, onMouseOut } = props;
 	const [visible, setVisible] = useState(true);
 	const [lastScrollY, setLastScrollY] = useState(0);
 

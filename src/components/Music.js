@@ -7,7 +7,6 @@ function Music(props) {
 		onMouseOver,
 		onMouseOut,
 		onFocus,
-		onBlur,
 		onClick,
 		active,
 		username,
