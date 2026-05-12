@@ -10,6 +10,8 @@ function Profile(props) {
 		onMouseOut,
 		onClick,
 		active,
+		onFocus,
+		onBlur,
 		wcupa,
 		bloom,
 		music,
@@ -35,6 +37,8 @@ function Profile(props) {
 						onMouseOut={onMouseOut}
 						onClick={onClick}
 						active={active === 'music'}
+						onFocus={onFocus || onMouseOver}
+						onBlur={onMouseOut}
 						username={music?.username}
 						icon={music?.icon}
 						name={music?.name}

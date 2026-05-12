@@ -3,6 +3,7 @@ import axios from 'axios';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from './components/Header.js';
 import Main from './components/Main.js';
+import Footer from './components/Footer.js';
 import ScrollToTop from './components/ScrollToTop.js';
 import { ThemeProvider } from './context/ThemeContext.js';
 import linksData, { profile } from './data/linksData.js';
@@ -17,6 +18,8 @@ function App() {
 	const { username } = profile;
 
 	const gravatar = `https://api.gravatar.com/v3/profiles/${username}`;
+	const handleMouseOver = (id) => setActive(id);
+	const handleMouseOut = () => setActive(null);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -50,6 +53,11 @@ function App() {
 					linksData={linksData}
 					active={active}
 					setActive={setActive}
+				/>
+				<Footer
+					onMouseOver={handleMouseOver}
+					onMouseOut={handleMouseOut}
+					active={active}
 				/>
 				<SpeedInsights />
 				<ScrollToTop />

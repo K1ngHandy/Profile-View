@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/GridItem.css';
 
 function GridItem(props) {
-	const { id, active, onClick, mouseOver, mouseOut, title, icon, name, alt } =
+	const { id, active, onClick, onMouseOver, onMouseOut, onFocus, title, icon, name, alt } =
 		props;
 
 	return (
@@ -10,8 +10,10 @@ function GridItem(props) {
 			id={id}
 			className={`grid-item ${active ? 'active' : ''}`}
 			onClick={onClick}
-			onMouseOver={mouseOver}
-			onMouseOut={mouseOut}
+			onMouseOver={onMouseOver}
+			onMouseOut={onMouseOut}
+			onFocus={onFocus || onMouseOver}
+			onBlur={onMouseOut}
 			title={title}
 		>
 			<img

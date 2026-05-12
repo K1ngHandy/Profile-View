@@ -6,6 +6,8 @@ function Music(props) {
 		id,
 		onMouseOver,
 		onMouseOut,
+		onFocus,
+		onBlur,
 		onClick,
 		active,
 		username,
@@ -48,6 +50,8 @@ function Music(props) {
 				id={id}
 				className={`music-container ${active ? 'active' : ''}`}
 				onMouseOver={() => onMouseOver('music')}
+				onFocus={onFocus || onMouseOver}
+				onBlur={onMouseOut}
 				onMouseMove={handleMouseMove}
 				onMouseOut={handleMouseLeave}
 				onClick={() => onClick(url)}

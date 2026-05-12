@@ -2,30 +2,23 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    margin: 1%;
+    border-radius: 9px;
     box-sizing: border-box;
 }
 
 .header-row {
-    background-color: lightsteelblue;
     border-radius: 9px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 63%;
     padding: 3px 9px;
 }
 
 .logo-button, .header {
     flex: 0 0 auto;
-}
-
-.location {
-    max-width: auto;
-    padding: 3px 6px;
-    border-radius: 9px;
-    margin: 3px;
-    align-self: center;
 }
 
 .app-logo {
@@ -34,21 +27,34 @@
     height: 18vmin;
     max-height: 75px;
     margin: 0;
+    animation: bounce 0.9s;
 }
 
 .username-container {
+    width: auto;
+    background-color: lightsteelblue;
+    border-radius: 9px;
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
     padding: 0 9px;
+    box-shadow: -1px 2px 2px #330033;
 }
 
 .username-container h1 {
     font-size: 2rem;
     margin: 0;
     text-align: center;
+}
+
+.location {
+    width: auto;
+    padding: 3px 6px;
+    border-radius: 9px;
+    margin: 3px;
+    align-self: center;
+    box-shadow: -1px 1px 1px lightsteelblue;
 }
 
 @media (max-width: 900px) {
@@ -80,15 +86,11 @@
     }
 }
 
-body.dark-mode .username-container {
-    border-top: solid 2px slategray;
-    border-right: solid 2px slategray;
-    border-bottom: solid 1px slategray;
-    border-left: solid 1px slategray;
-}
-
 @keyframes bounce {
-    .app-logo {
-        min-height: auto;
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    0% {
+        transform: translateY(-10px) scale(1.2);
     }
 }

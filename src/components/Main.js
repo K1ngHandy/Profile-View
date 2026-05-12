@@ -1,12 +1,12 @@
 import React from 'react';
 import Profile from './Profile.js';
-import Footer from './Footer.js';
 import '../styles/Main.css';
 
 function Main({ profile, linksData, active, setActive }) {
 	const handleMouseOver = (id) => setActive(id);
 	const handleMouseOut = () => setActive(null);
-	const handleClick = (url) => window.open(url, '_blank', 'noopener,noreferrer');
+	const handleClick = (url) =>
+		window.open(url, '_blank', 'noopener,noreferrer');
 
 	const musicLink = linksData.find((link) => link.id === 'music');
 	const wcupaLink = linksData.find((link) => link.id === 'wcupa');
@@ -50,12 +50,6 @@ function Main({ profile, linksData, active, setActive }) {
 				music={musicLink}
 				leftGridItems={leftGridItems}
 				rightGridItems={rightGridItems}
-			/>
-			<Footer
-				onMouseOver={handleMouseOver}
-				onMouseOut={handleMouseOut}
-				onClick={handleClick}
-				active={active}
 			/>
 		</div>
 	);

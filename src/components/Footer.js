@@ -5,7 +5,7 @@ import '../styles/Footer.css';
 import { githubIconWhite } from '../assets/images';
 
 function Footer(props) {
-	const { onMouseOver, onMouseOut, active } = props;
+	const { active, onMouseOver, onMouseOut, onFocus } = props;
 	const [visible, setVisible] = useState(true);
 	const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -46,6 +46,8 @@ function Footer(props) {
 					className={`link ${active === footerId ? 'active' : ''}`}
 					onMouseOver={() => onMouseOver(footerId)}
 					onMouseOut={onMouseOut}
+					onFocus={onMouseOver}
+					onBlur={onMouseOut}
 				>
 					K1ngHandy
 					{active && (
