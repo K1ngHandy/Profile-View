@@ -1,5 +1,6 @@
 import React from 'react';
 import Profile from './Profile.js';
+// import Divider from './Divider.js';
 import '../styles/Main.css';
 
 function Main({ profile, linksData, active, setActive }) {
@@ -38,6 +39,7 @@ function Main({ profile, linksData, active, setActive }) {
 
 	return (
 		<div className="main-container">
+			{/* <Divider /> */}
 			<Profile
 				id={profile.id}
 				onMouseOver={handleMouseOver}
@@ -51,6 +53,7 @@ function Main({ profile, linksData, active, setActive }) {
 				leftGridItems={leftGridItems}
 				rightGridItems={rightGridItems}
 			/>
+			{/* <Divider /> */}
 		</div>
 	);
 }

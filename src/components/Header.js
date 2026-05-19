@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Divider from './Divider.js';
 import '../styles/Header.css';
 
 function Header({ profile, active, setActive }) {
@@ -8,7 +7,6 @@ function Header({ profile, active, setActive }) {
 
 	return (
 		<header className="header">
-			<Divider />
 			<div className="header-row">
 				<div className="username-container">
 					<button

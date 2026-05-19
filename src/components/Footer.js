@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import linksData from '../data/linksData';
-import Divider from './Divider.js';
 import '../styles/Footer.css';
 import { githubIconWhite } from '../assets/images';
 
@@ -66,7 +65,6 @@ function Footer(props) {
 					&nbsp;&copy;{new Date().getFullYear()}, All rights reserved.
 				</span>
 			</p>
-			<Divider />
 		</footer>
 	);
 }
