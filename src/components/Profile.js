@@ -3,19 +3,7 @@ import GridItem from './GridItem.js';
 import '../styles/Profile.css';
 
 function Profile(props) {
-	const {
-		id,
-		onMouseOver,
-		onMouseOut,
-		onClick,
-		active,
-		onFocus,
-		wcupa,
-		bloom,
-		music,
-		leftGridItems,
-		rightGridItems,
-	} = props;
+	const { wcupa, bloom, leftGridItems, rightGridItems } = props;
 
 	return (
 		<div className="profile-container-grid">
