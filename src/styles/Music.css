@@ -1,7 +1,7 @@
 .music-container {
     display: flex;
     align-items: center;
-    background-color: lightgray;
+    background-color: lightsteelblue;
     margin: 15px auto;
     padding: 3px;
     height: 30px;
@@ -12,7 +12,7 @@
 }
 .music-container.active {
     color: #222222;
-    background-color: slategray;
+    background-color: lightgray;
     cursor: pointer;
     border-top: solid 1px lightsteelblue;
     border-right: solid 1px lightsteelblue;
@@ -23,7 +23,7 @@
 
 body.dark-mode .music-container {
     color: #131313;
-    background-color: gray;
+    background-color: lightsteelblue;
     box-shadow: -3px 3px 3px #330033;
     border-top: solid 2px lightslategray;
     border-right: solid 2px lightslategray;
@@ -32,7 +32,7 @@ body.dark-mode .music-container {
 }
 body.dark-mode .music-container:hover {
     color: #222;
-    background-color: slategray;
+    background-color: steelblue;
     box-shadow: -3px 3px 3px #333;
     border-top: solid 1px #333;
     border-right: solid 1px #333;
@@ -43,7 +43,7 @@ body.dark-mode .music-container:hover {
 .music-icon {
     vertical-align: middle;
     height: 75px;
-    padding: 15px;
+    padding: 15px 0;
     margin: 0 5px;
     object-fit: cover;
 }

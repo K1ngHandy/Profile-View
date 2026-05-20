@@ -22,3 +22,13 @@ main {
     width: 75%;
     margin: auto;
 }
+
+.main-music {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 27vw; */
+    min-width: 240px;
+    margin: 12px auto;
+    text-align: center;
+}

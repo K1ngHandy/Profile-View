@@ -1,5 +1,4 @@
 import React from 'react';
-import Music from './Music.js';
 import GridItem from './GridItem.js';
 import '../styles/Profile.css';
 
@@ -29,22 +28,6 @@ function Profile(props) {
 				))}
 			</div>
 			<div className="profile-main-content">
-				<section className="profile-music">
-					<Music
-						id={id}
-						onMouseOver={() => onMouseOver('music')}
-						onMouseOut={onMouseOut}
-						onClick={onClick}
-						active={active === 'music'}
-						onFocus={onFocus || onMouseOver}
-						onBlur={onMouseOut}
-						username={music?.username}
-						icon={music?.icon}
-						name={music?.name}
-						alt={music?.alt}
-						url={music?.url}
-					/>
-				</section>
 				<section className="profile profile-intro">
 					<h2>Steve Handy</h2>
 					<p>

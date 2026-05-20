@@ -1,5 +1,6 @@
 import React from 'react';
 import Profile from './Profile.js';
+import Music from './Music.js';
 import '../styles/Main.css';
 
 function Main({ profile, linksData, active, setActive }) {
@@ -51,6 +52,20 @@ function Main({ profile, linksData, active, setActive }) {
 				leftGridItems={leftGridItems}
 				rightGridItems={rightGridItems}
 			/>
+			<section className="main-music">
+				<Music
+					id={profile.id}
+					onMouseOver={() => handleMouseOver('music')}
+					onMouseOut={handleMouseOut}
+					onClick={handleClick}
+					active={active === 'music'}
+					username={musicLink?.username}
+					icon={musicLink?.icon}
+					name={musicLink?.name}
+					alt={musicLink?.alt}
+					url={musicLink?.url}
+				/>
+			</section>
 		</div>
 	);
 }

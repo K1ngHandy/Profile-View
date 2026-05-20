@@ -27,15 +27,6 @@
     grid-column: 3;
 }
 
-.profile-music {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    margin: 0 auto;
-    text-align: center;
-}
-
 .wcupa-icon {
     height: 80px;
     width: 120px;
@@ -82,9 +73,5 @@
 
     .profile-main-content {
         width: 100%;
-    }
-
-    .profile-music {
-        width: 78%;
     }
 }

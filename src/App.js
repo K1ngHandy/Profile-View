@@ -50,7 +50,6 @@ function App() {
 					active={active}
 					setActive={setActive}
 				/>
-				<Divider />
 				<Main
 					profile={profile}
 					linksData={linksData}
