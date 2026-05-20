@@ -21,6 +21,13 @@
     flex: 0 0 auto;
 }
 
+.logo-button {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-8px);
+    margin-block: -15px;
+}
+
 .app-logo {
     position: static;
     flex: 0 0 auto;
@@ -45,6 +52,8 @@
 .username-container h1 {
     font-size: 2rem;
     margin: 0;
+    padding-top: 3px;
+    padding-bottom: 3px;
     text-align: center;
 }
 

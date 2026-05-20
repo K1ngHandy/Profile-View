@@ -46,7 +46,7 @@ function Profile(props) {
 					/>
 				</section>
 				<section className="profile profile-intro">
-					<h2>Steve Handy.</h2>
+					<h2>Steve Handy</h2>
 					<p>
 						Full Stack web developer with a solid foundation in Git,
 						HTML, CSS, Java, JavaScript, Python, React, Swift,
