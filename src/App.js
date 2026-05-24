@@ -3,7 +3,6 @@ import axios from 'axios';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from './components/Header.js';
 import Main from './components/Main.js';
-import Divider from './components/Divider.js';
 import Footer from './components/Footer.js';
 import ScrollToTop from './components/ScrollToTop.js';
 import { ThemeProvider } from './context/ThemeContext.js';
@@ -43,7 +42,6 @@ function App() {
 	return (
 		<ThemeProvider>
 			<div className="App">
-				<Divider />
 				<Header
 					profile={profile}
 					data={data}
@@ -56,7 +54,6 @@ function App() {
 					active={active}
 					setActive={setActive}
 				/>
-				<Divider />
 				<Footer
 					onMouseOver={handleMouseOver}
 					onMouseOut={handleMouseOut}

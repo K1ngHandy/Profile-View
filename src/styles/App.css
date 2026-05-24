@@ -6,6 +6,7 @@ html, body {
 }
 
 body {
+  color: #330033;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -29,7 +30,6 @@ body.dark-mode {
 }
 body.light-mode {
   background-color: lightgray;
-  color: #121212;
 }
 
 .error {

@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Profile from './Profile.js';
+import Divider from './Divider.js';
 import Music from './Music.js';
 import '../styles/Main.css';
 
@@ -39,6 +41,27 @@ function Main({ profile, linksData, active, setActive }) {
 
 	return (
 		<div className="main-container">
+			<div className="main-profile-title">
+				<h2>Steve Handy</h2>
+				<button
+					type="button"
+					className="main-location"
+					id={profile.id || undefined}
+					style={{ cursor: 'pointer' }}
+					onClick={() =>
+						window.open(
+							`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+								profile.location,
+							)}`,
+							'_blank',
+							'noopener,noreferrer',
+						)
+					}
+				>
+					🧭 {profile.location}
+				</button>
+			</div>
+			<Divider />
 			<Profile
 				id={profile.id}
 				onMouseOver={handleMouseOver}
@@ -52,6 +75,7 @@ function Main({ profile, linksData, active, setActive }) {
 				leftGridItems={leftGridItems}
 				rightGridItems={rightGridItems}
 			/>
+			<Divider />
 			<section className="main-music">
 				<Music
 					id={profile.id}
@@ -71,3 +95,23 @@ function Main({ profile, linksData, active, setActive }) {
 }
 
 export default Main;
+
+Main.propTypes = {
+	profile: PropTypes.shape({
+		id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+		username: PropTypes.string,
+		location: PropTypes.string,
+	}).isRequired,
+	linksData: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.string,
+			name: PropTypes.string,
+			icon: PropTypes.string,
+			alt: PropTypes.string,
+			url: PropTypes.string,
+			username: PropTypes.string,
+		}),
+	).isRequired,
+	active: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+	setActive: PropTypes.func.isRequired,
+};

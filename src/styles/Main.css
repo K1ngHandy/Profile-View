@@ -15,19 +15,48 @@ main {
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 100%;
+    width: 96%;
 }
 
-.profile {
-    width: 75%;
-    margin: auto;
+.main-profile-title {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.main-profile-title h2 {
+    font-size: 1.8rem;
+    color: #330033;
+    margin: 0;
+}
+
+.main-location {
+    width: auto;
+    padding: 3px 6px;
+    border-radius: 9px;
+    box-shadow: -1px 1px 1px lightsteelblue;
+}
+
+body.dark-mode .main-location {
+    background-color: lightsteelblue;
+    color: #131313;
+    box-shadow: -1px 1px 1px #330033;
+}
+
+body.dark-mode .main-location:hover {
+    background-color: steelblue;
+    color: #131313;
+    box-shadow: -3px 3px 6px #330033;
 }
 
 .main-music {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* width: 27vw; */
     min-width: 240px;
     margin: 12px auto;
     text-align: center;

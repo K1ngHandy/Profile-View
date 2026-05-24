@@ -50,32 +50,12 @@
 }
 
 .username-container h1 {
-    font-size: 2rem;
+    color: #440044;
+    font-size: 2.4rem;
     margin: 0;
     padding-top: 3px;
     padding-bottom: 3px;
     text-align: center;
-}
-
-.location {
-    width: auto;
-    padding: 3px 6px;
-    border-radius: 9px;
-    margin: 3px;
-    align-self: center;
-    box-shadow: -1px 1px 1px lightsteelblue;
-}
-
-body.dark-mode .location {
-    background-color: lightsteelblue;
-    color: #131313;
-    box-shadow: -1px 1px 1px #330033;
-}
-
-body.dark-mode .location:hover {
-    background-color: steelblue;
-    color: #333;
-    box-shadow: -3px 3px 6px #330033;
 }
 
 @media (max-width: 900px) {

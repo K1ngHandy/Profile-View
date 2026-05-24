@@ -1,3 +1,8 @@
+.profile {
+    width: 75%;
+    margin: auto;
+}
+
 .profile-container-grid {
     display: grid;
     grid-template-columns: 1fr 2.5fr 1fr;

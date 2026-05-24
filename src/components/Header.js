@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../styles/Header.css';
 
 function Header({ profile, active, setActive }) {
-	const { id, username, location, logo, alt } = profile;
+	const { username, logo, alt } = profile;
 
 	return (
 		<header className="header">
@@ -38,23 +38,6 @@ function Header({ profile, active, setActive }) {
 					</h1>
 				</div>
 			</div>
-			<button
-				type="button"
-				className="location"
-				id={id || undefined}
-				style={{ cursor: 'pointer' }}
-				onClick={() =>
-					window.open(
-						`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-							location,
-						)}`,
-						'_blank',
-						'noopener,noreferrer',
-					)
-				}
-			>
-				🧭 {location}
-			</button>
 		</header>
 	);
 }
