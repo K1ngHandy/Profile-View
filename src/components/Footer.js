@@ -1,12 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import linksData from '../data/linksData';
+import { ThemeContext } from '../context/ThemeContext.js';
 import '../styles/Footer.css';
-import { githubIconWhite } from '../assets/images';
+import { githubIconWhite, githubIconBlack } from '../assets/images';
 
 function Footer(props) {
 	const { active, onMouseOver, onMouseOut } = props;
+	const { theme } = useContext(ThemeContext);
 	const [visible, setVisible] = useState(true);
 	const [lastScrollY, setLastScrollY] = useState(0);
+	const githubPreviewIcon =
+		theme === 'dark' ? githubIconWhite : githubIconBlack;
 
 	const { url: githubUrl } =
 		linksData.find((link) => link.name === 'GitHub') || {};
@@ -45,17 +50,17 @@ function Footer(props) {
 					className={`link ${active === footerId ? 'active' : ''}`}
 					onMouseOver={() => onMouseOver(footerId)}
 					onMouseOut={onMouseOut}
-					onFocus={onMouseOver}
+					onFocus={() => onMouseOver(footerId)}
 					onBlur={onMouseOut}
 				>
 					K1ngHandy
 					{active && (
 						<span className="active-text">
 							<img
-								src={githubIconWhite}
+								src={githubPreviewIcon}
 								alt="GitHub"
 								className="icons"
-							/>
+							/>{' '}
 							GitHub
 						</span>
 					)}
@@ -68,5 +73,11 @@ function Footer(props) {
 		</footer>
 	);
 }
+
+Footer.propTypes = {
+	active: PropTypes.string,
+	onMouseOver: PropTypes.func.isRequired,
+	onMouseOut: PropTypes.func.isRequired,
+};
 
 export default Footer;

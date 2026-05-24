@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Music.css';
 
 function Music(props) {
@@ -22,15 +23,18 @@ function Music(props) {
 	const getPreviewUrl = (url) => {
 		const apiKey = process.env.REACT_APP_API_KEY;
 		return `https://api.screenshotlayer.com/api/capture?access_key=${apiKey}&url=${encodeURIComponent(
-			url
+			url,
 		)}&viewport=1440x900&width=400`;
 	};
 
 	const handleMouseMove = (e) => {
-		setShowPreview(true);
 		setPreviewPosition({ x: e.clientX + 15, y: e.clientY + 15 });
+	};
 
-		if (onMouseOver) onMouseOver();
+	const handleMouseEnter = () => {
+		setShowPreview(true);
+
+		if (onMouseOver) onMouseOver('music');
 	};
 
 	const handleMouseLeave = () => {
@@ -39,34 +43,53 @@ function Music(props) {
 		if (onMouseOut) onMouseOut();
 	};
 
+	const handleFocus = (event) => {
+		if (onFocus) onFocus(event);
+
+		if (onMouseOver) onMouseOver('music');
+	};
+
+	const handleActivate = () => {
+		if (onClick) onClick(url);
+	};
+
+	const handleKeyDown = (event) => {
+		if (event.key === 'Enter' || event.key === ' ') {
+			event.preventDefault();
+			handleActivate();
+		}
+	};
+
 	const handleImageError = () => {
 		setPreviewError(true);
 	};
 
 	return (
 		<>
-			<section
+			<button
 				id={id}
+				type="button"
 				className={`music-container ${active ? 'active' : ''}`}
-				onMouseOver={() => onMouseOver('music')}
-				onFocus={onFocus || onMouseOver}
-				onBlur={onMouseOut}
+				onMouseEnter={handleMouseEnter}
+				onFocus={handleFocus}
+				onBlur={handleMouseLeave}
 				onMouseMove={handleMouseMove}
-				onMouseOut={handleMouseLeave}
-				onClick={() => onClick(url)}
+				onMouseLeave={handleMouseLeave}
+				onClick={handleActivate}
+				onKeyDown={handleKeyDown}
+				aria-label={name ? `Play ${name}` : 'Play music'}
 			>
 				<img
-					id={id === 'music'}
 					className="music-icon"
 					src={icon}
 					alt={alt}
 				/>
 				<h3>🎶{name}</h3>
-			</section>
+			</button>
 
 			{showPreview && (
 				<section
-					id={id === 'music'}
+					id={id ? `${id}-preview` : undefined}
 					className="music-preview"
 					style={{
 						position: 'fixed',
@@ -97,4 +120,19 @@ function Music(props) {
 		</>
 	);
 }
+
+Music.propTypes = {
+	id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+	onMouseOver: PropTypes.func,
+	onMouseOut: PropTypes.func,
+	onFocus: PropTypes.func,
+	onClick: PropTypes.func,
+	active: PropTypes.bool,
+	username: PropTypes.string,
+	icon: PropTypes.string,
+	name: PropTypes.string,
+	alt: PropTypes.string,
+	url: PropTypes.string,
+};
+
 export default Music;

@@ -1,24 +1,38 @@
 .music-container {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     background-color: lightsteelblue;
     margin: 15px auto;
-    padding: 3px;
+    padding: 6px 12px 6px 10px;
     height: 30px;
     gap: 12px;
     font-size: 0.72rem;
     box-shadow: -1px 2px 2px #111;
     border-radius: 45px;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    cursor: pointer;
+    text-align: left;
 }
 .music-container.active {
     color: #222222;
     background-color: lightgray;
-    cursor: pointer;
     border-top: solid 1px lightsteelblue;
     border-right: solid 1px lightsteelblue;
     border-bottom: solid 2px lightsteelblue;
     border-left: solid 2px lightsteelblue;
     box-shadow: -3px 3px 6px #330033;
+}
+
+.music-container:focus-visible {
+    outline: 2px solid #330033;
+    outline-offset: 2px;
 }
 
 body.dark-mode .music-container {
@@ -31,8 +45,8 @@ body.dark-mode .music-container {
     border-left: solid 1px lightslategray;
 }
 body.dark-mode .music-container:hover {
-    color: #222;
-    background-color: steelblue;
+    color: #fff;
+    background-color: #2f5d7c;
     box-shadow: -3px 3px 3px #333;
     border-top: solid 1px #333;
     border-right: solid 1px #333;
@@ -47,7 +61,7 @@ body.dark-mode .music-container:hover {
     margin: 0 5px;
     object-fit: cover;
 }
-.music-icon:hover {
+.music-container:hover .music-icon {
     transform: scale(1.08);
 }
 
