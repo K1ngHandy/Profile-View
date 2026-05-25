@@ -1,9 +1,10 @@
 .footer {
-    background-color: #440044;
-    padding: 0 0.9rem 0.3rem 0.9rem;
+    background-color: #330033;
+    padding: 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-radius: 12px;
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
     z-index: 100;
