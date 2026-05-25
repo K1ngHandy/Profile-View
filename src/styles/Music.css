@@ -8,7 +8,7 @@
     height: 30px;
     gap: 12px;
     font-size: 0.72rem;
-    box-shadow: -1px 2px 2px #111;
+    box-shadow: -1px 1px 2px #111;
     border-radius: 45px;
     border: none;
     appearance: none;
@@ -46,7 +46,7 @@ body.dark-mode .music-container {
 }
 body.dark-mode .music-container:hover {
     color: #fff;
-    background-color: #2f5d7c;
+    background-color: steelblue;
     box-shadow: -3px 3px 3px #333;
     border-top: solid 1px #333;
     border-right: solid 1px #333;

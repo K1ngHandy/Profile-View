@@ -12,7 +12,7 @@
 }
 
 body.dark-mode .grid-item {
-    background-color: lightsteelblue;
+    background-color: lightgray;
 }
 body.dark-mode .grid-item:hover {
     background-color: steelblue;
@@ -20,8 +20,8 @@ body.dark-mode .grid-item:hover {
 
 .grid-item:hover {
     transform: scale(1.2);
-    background-color: lightsteelblue;
-    border: solid 2.1px #440044;
+    background-color: lightgray;
+    box-shadow: -2px 3px 3px steelblue;
 }
 .grid-item.active {
     transform: scale(1.2);

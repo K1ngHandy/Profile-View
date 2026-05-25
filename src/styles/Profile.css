@@ -35,16 +35,42 @@
 .wcupa-icon {
     height: 80px;
     width: 120px;
+    box-shadow: -1px 1px 2px #333;
     border: 1px solid #333;
     border-radius: 12px;
+}
+
+.wcupa-icon:hover {
+    border: 1px solid lightslategray;
+    box-shadow: -2px 3px 3px steelblue;
 }
 
 .bloom-icon {
     height: 34px;
     width: 135px;
     padding: 12px;
-    border: 1px solid #333;
+    background-color: #f0f0f0;
+    box-shadow: -1px 1px 2px #333;
+    border: 1px solid slategray;
     border-radius: 12px;
+}
+
+.bloom-icon:hover {
+    background-color: lightgray;
+    box-shadow: -2px 3px 3px steelblue;
+    border: 1px solid lightslategray;
+}
+
+body.dark-mode .bloom-icon {
+    background-color: lightgray;
+    color: #131313;
+    box-shadow: -1px 1px 2px #330033;
+}
+
+body.dark-mode .bloom-icon:hover {
+    background-color: steelblue;
+    color: #131313;
+    box-shadow: -3px 3px 6px #330033;
 }
 
 @media (max-width: 900px) {
