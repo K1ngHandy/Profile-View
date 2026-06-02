@@ -5,39 +5,26 @@ import '../styles/Header.css';
 function Header({ profile, active, setActive }) {
 	const { username, logo, alt } = profile;
 
+	const handleLogoClick = () => {
+		console.log('Logo Clicked');
+	};
+
 	return (
 		<header className="header">
-			<div className="header-row">
-				<div className="username-container">
-					<button
-						type="button"
-						className="logo-button"
-						onMouseDown={() => setActive('profile')}
-						onMouseOut={() => setActive(null)}
-						onBlur={() => setActive(null)}
-						style={{
-							padding: 0,
-							border: 'none',
-							background: 'none',
-						}}
-					>
-						<img
-							src={logo}
-							className="app-logo bounce"
-							alt={alt}
-						/>
-					</button>
-					<h1
-						className={active === 'profile' ? 'active' : ''}
-						onMouseOver={() => setActive('profile')}
-						onMouseOut={() => setActive(null)}
-						onFocus={() => setActive('profile')}
-						onBlur={() => setActive(null)}
-					>
-						{username}
-					</h1>
-				</div>
-			</div>
+			<button
+				className="header-logo-btn"
+				onClick={handleLogoClick}
+				onMouseOver={() => setActive('profile')}
+				onMouseOut={() => setActive(null)}
+				aria-label={`${alt || 'App logo'} - Click for profile`}
+			>
+				<img
+					src={logo}
+					className="app-logo bounce"
+					alt={alt}
+				/>
+			</button>
+			<h1 className={active === 'profile' ? 'active' : ''}>{username}</h1>
 		</header>
 	);
 }

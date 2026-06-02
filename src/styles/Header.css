@@ -1,87 +1,86 @@
 .header {
     background-color: #440044;
-    padding: 0.3rem 0;
-    width: 100%;
+    width: 42vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: 1%;
-    border-radius: 12px;
+    border-radius: 15px;
     box-sizing: border-box;
-}
-
-.header-row {
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 63%;
-    padding: 3px 9px;
-}
-
-.logo-button, .header {
-    flex: 0 0 auto;
-}
-
-.logo-button {
-    position: relative;
-    z-index: 1;
-    transform: translateX(-8px);
-    margin-block: -15px;
+    /* allow child (logo) to overflow the rounded header box */
+    overflow: visible;
 }
 
 .app-logo {
-    position: static;
     flex: 0 0 auto;
-    height: 18vmin;
-    max-height: 75px;
+    /* make logo a bit larger so it can extend beyond header */
+    height: 16vmin;
     margin: 0;
-    animation: bounce 0.9s;
+    animation: horizontalFlip 0.6s;
+    animation-iteration-count: 1.5;
+    /* extend beyond header top/bottom */
+    margin-block: -8px;
 }
 
-.username-container {
-    width: auto;
-    background-color: lightsteelblue;
-    border-radius: 9px;
-    flex: 1 1 auto;
+.header-logo-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0 9px;
-    box-shadow: -1px 2px 2px #330033;
-    border-radius: 33px;
 }
 
-.username-container h1 {
-    color: #440044;
-    font-size: 2.4rem;
+.header-logo-btn:focus-visible {
+    outline: 2px solid #00d9ff;
+    border-radius: 4px;
+}
+
+header h1 {
+    color: #f0f0f0;
+    font-size: 2.7rem;
     margin: 0;
-    padding-top: 3px;
-    padding-bottom: 3px;
     text-align: center;
+    flex: 1 1 auto;
+    min-width: 0; /* allow truncation in flex containers */
+}
+
+header h1.active {
+    color: lightsteelblue;
+}
+
+body.dark-mode header h1 {
+    color: lightsteelblue;
+}
+
+body.dark-mode header h1.active {
+    color: steelblue;
 }
 
 @media (max-width: 900px) {
+    .header {
+        width: 75vw;
+    }
+
     .app-logo {
         height: 12vmin;
     }
 }
 
 @media (max-width: 600px) {
+    .header {
+        width: 72vw;
+    }
+
     .app-logo {
-        height: 12vmin;
-        min-height: 45px;
-        max-height: 56px;
+        height: 15vmin;
     }
-    .username-container {
-        max-width: none;
-        justify-content: center;
-    }
-    .username-container h1 {
+
+    header h1 {
         flex: 1 1 auto;
         font-size: clamp(1.4rem, 6vw, 2rem);
-        text-align: center;
-        margin: 0;
+        text-align: left;
+        margin: 0 0 0 3vw;
         line-height: 1.1;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -90,11 +89,14 @@
     }
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0) scale(1);
-    }
+@keyframes horizontalFlip {
     0% {
-        transform: translateY(-10px) scale(1.2);
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(-1);
+    }
+    100% {
+        transform: scaleX(1);
     }
 }

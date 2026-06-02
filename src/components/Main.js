@@ -89,7 +89,9 @@ function Main({ profile, linksData, active, setActive }) {
 					alt={musicLink?.alt}
 					url={musicLink?.url}
 				/>
+				<div className="main-bottom-spacer" />
 			</section>
+			<section className="section-spacer" />
 		</div>
 	);
 }

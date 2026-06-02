@@ -11,8 +11,13 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 99%;
+  border-radius: 33px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  border-top: solid slategray 3px;
+  border-left: solid slategray 6px;
+  border-right: solid slategray 6px;
+  border-bottom: solid slategray 9px;
 }
 
 .App {
@@ -20,8 +25,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 96%;
+  height: 99%;
   text-align: center;
 }
 

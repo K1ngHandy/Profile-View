@@ -3,8 +3,9 @@
     padding: 0;
     position: fixed;
     bottom: 0;
-    width: 100%;
-    border-radius: 12px;
+    width: 57vw;
+    height: 12vh;
+    border-radius: 15px;
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
     z-index: 100;
@@ -77,4 +78,10 @@ body.dark-mode .link .active-text {
     height: 24px;
     vertical-align: middle;
     margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        width: 75vw;
+    }
 }
