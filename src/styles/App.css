@@ -14,10 +14,6 @@ body {
   width: 99%;
   border-radius: 33px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border-top: solid slategray 3px;
-  border-left: solid slategray 6px;
-  border-right: solid slategray 6px;
-  border-bottom: solid slategray 9px;
 }
 
 .App {
@@ -28,6 +24,10 @@ body {
   width: 96%;
   height: 99%;
   text-align: center;
+}
+
+.App.footer-visible {
+  padding-bottom: 12vh;
 }
 
 body.dark-mode {

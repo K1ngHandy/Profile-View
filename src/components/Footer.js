@@ -5,39 +5,15 @@ import { ThemeContext } from '../context/ThemeContext.js';
 import '../styles/Footer.css';
 import { githubIconWhite, githubIconBlack } from '../assets/images';
 
-function Footer(props) {
-	const { active, onMouseOver, onMouseOut } = props;
+function Footer({ active, onMouseOver, onMouseOut, visible }) {
 	const { theme } = useContext(ThemeContext);
-	const [visible, setVisible] = useState(true);
-	const [lastScrollY, setLastScrollY] = useState(0);
+
 	const githubPreviewIcon =
 		theme === 'dark' ? githubIconWhite : githubIconBlack;
-
 	const { url: githubUrl } =
 		linksData.find((link) => link.name === 'GitHub') || {};
 
 	const footerId = 'footer-github-link';
-
-	useEffect(() => {
-		const scrollThreshold = window.scrollY;
-
-		const handleScroll = () => {
-			const currentScrollY = window.scrollY;
-
-			if (currentScrollY <= 5) {
-				setVisible(true);
-			} else if (
-				Math.abs(currentScrollY - lastScrollY) > scrollThreshold
-			) {
-				setVisible(currentScrollY < lastScrollY);
-			}
-
-			setLastScrollY(currentScrollY);
-		};
-
-		window.addEventListener('scroll', handleScroll, { passive: true });
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, [lastScrollY]);
 
 	return (
 		<footer className={`footer ${visible ? 'visible' : 'hidden'}`}>
@@ -78,6 +54,7 @@ Footer.propTypes = {
 	active: PropTypes.string,
 	onMouseOver: PropTypes.func.isRequired,
 	onMouseOut: PropTypes.func.isRequired,
+	visible: PropTypes.bool,
 };
 
 export default Footer;

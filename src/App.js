@@ -17,9 +17,14 @@ function App() {
 
 	const { username } = profile;
 
+	// Gravatar integration
 	const gravatar = `https://api.gravatar.com/v3/profiles/${username}`;
 	const handleMouseOver = (id) => setActive(id);
 	const handleMouseOut = () => setActive(null);
+
+	// Footer visibility
+	const [footerVisible, setFooterVisible] = useState(false);
+	const [lastScrollY, setLastScrollY] = useState(0);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -36,12 +41,32 @@ function App() {
 		fetchData();
 	}, [gravatar]);
 
+	useEffect(() => {
+		const scrollThreshold = window.scrollY;
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+
+			if (currentScrollY <= 5) {
+				setFooterVisible(false);
+			} else if (
+				Math.abs(currentScrollY - lastScrollY) > scrollThreshold
+			) {
+				setFooterVisible(currentScrollY > lastScrollY);
+			}
+
+			setLastScrollY(currentScrollY);
+		};
+
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [lastScrollY]);
+
 	if (loading) return <div>Loading...</div>;
 	if (error) return <div className="error">{error}</div>;
 
 	return (
 		<ThemeProvider>
-			<div className="App">
+			<div className={`App ${footerVisible ? 'footer-visible' : ''}`}>
 				<Header
 					profile={profile}
 					data={data}
@@ -58,6 +83,7 @@ function App() {
 					onMouseOver={handleMouseOver}
 					onMouseOut={handleMouseOut}
 					active={active}
+					visible={footerVisible}
 				/>
 				<SpeedInsights />
 				<ScrollToTop />

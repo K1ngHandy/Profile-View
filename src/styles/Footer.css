@@ -3,15 +3,17 @@
     padding: 0;
     position: fixed;
     bottom: 0;
-    width: 57vw;
+    width: 72vw;
     height: 12vh;
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
     z-index: 100;
 }
+
 .footer.visible {
     transform: translateY(0);
+
 }
 .footer.hidden {
     transform: translateY(100%);
