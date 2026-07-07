@@ -4,7 +4,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 56%;
+    width: 93%;
     padding: 20px;
     box-sizing: border-box;
 
@@ -15,7 +15,7 @@ main {
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 63vw;
+    width: 75vw;
 }
 
 .main-profile-title {
@@ -72,8 +72,14 @@ body.dark-mode .main-location:hover {
     height: 15vh;
 }
 
+@media (max-width: 900px) {
+    .main-container {
+        width: 93vw;
+    }
+}
+
 @media (max-width: 600px) {
     .main-container {
-        width: 84vw;
+        width: 87vw;
     }
 }

@@ -10,9 +10,11 @@
     margin: auto;
     padding: 21px 33px;
     background-color: lightsteelblue;
+    width: 100%;
     max-width: 90vw;
     border-radius: 33px;
     box-shadow: -1px 2px 2px #330033;
+    box-sizing: border-box;
 }
 
 .profile-grid-column {

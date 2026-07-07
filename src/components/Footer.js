@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import linksData from '../data/linksData';
 import { ThemeContext } from '../context/ThemeContext.js';

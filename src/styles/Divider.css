@@ -1,22 +1,22 @@
 .divider {
     border: solid 0.12rem lightsteelblue;
     background-color: lightsteelblue;
-    border-radius: 33px;
+    border-radius: 48px;
     height: 2px;
     margin-top: 21px;
     margin-bottom: 18px;
-    width: 57%;
+    width: 57vw;
     box-shadow: -1px 2px 2px #330033;
 }
 
 @media (max-width: 900px) {
     .divider {
-        width: 81%;
+        width: 81vw;
     }
 }
 
 @media (max-width: 600px) {
     .divider {
-        width: 75%;
+        width: 75vw;
     }
 }

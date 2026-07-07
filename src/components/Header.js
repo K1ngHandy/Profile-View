@@ -11,19 +11,18 @@ function Header({ profile, active, setActive }) {
 
 	return (
 		<header className="header">
-			<button
-				className="header-logo-btn"
+			<div
+				className={`header-logo-image${active === 'profile' ? ' active' : ''}`}
 				onClick={handleLogoClick}
-				onMouseOver={() => setActive('profile')}
-				onMouseOut={() => setActive(null)}
-				aria-label={`${alt || 'App logo'} - Click for profile`}
+				role="img"
+				aria-label={`${alt || 'App logo'}`}
 			>
 				<img
 					src={logo}
 					className="app-logo bounce"
 					alt={alt}
 				/>
-			</button>
+			</div>
 			<h1 className={active === 'profile' ? 'active' : ''}>{username}</h1>
 		</header>
 	);
