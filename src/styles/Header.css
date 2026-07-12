@@ -1,16 +1,18 @@
 .header {
     background-color: #440044;
     position: relative;
+    min-height: 9vh;
     min-width: 42vw;
-    width: 51vw;
+    width: 57vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     margin: 1%;
+    padding: 1%;
     border-radius: 48px;
     box-sizing: border-box;
-    /* allow child (logo) to overflow the rounded header box */
+    text-shadow: #330033 3px 3px 12px;
     overflow: visible;
 }
 
@@ -67,12 +69,12 @@ body.dark-mode header h1:hover {
 
     header h1 {
         font-size: clamp(1.4rem, 6vw, 2rem);
-        margin: 0;
         line-height: 1.1;
         overflow: hidden;
+        margin-left: 3.6rem;
+        text-align: center;
         text-overflow: ellipsis;
         white-space: nowrap;
         min-width: 0;
-        text-align: center;
     }
 }

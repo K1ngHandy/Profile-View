@@ -1,11 +1,11 @@
 .footer {
     background-color: #330033;
-    padding: 0;
+    padding-bottom: 1%;
     position: fixed;
     bottom: 0;
-    width: 48vw;
+    width: 42vw;
     height: 6vh;
-    border-radius: 15px;
+    border-radius: 33px;
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
     z-index: 100;
