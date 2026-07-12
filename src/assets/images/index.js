@@ -1,5 +1,5 @@
 import logoLight from './LionCoinToken.png';
-import musicIcon from './music-icon.png';
+import banner from './banner-elemental.jpeg';
 import githubIconBlack from './github-icon-black.png';
 import githubIconWhite from './github-icon-white.png';
 import tikTokIconBlack from './tiktok-icon-black.png';
@@ -15,7 +15,7 @@ import bloomIcon from './bloom-logo.png';
 
 export {
 	logoLight,
-	musicIcon,
+	banner,
 	githubIconBlack,
 	githubIconWhite,
 	tikTokIconBlack,

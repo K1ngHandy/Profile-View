@@ -1,6 +1,6 @@
 import {
 	logoLight,
-	musicIcon,
+	banner,
 	githubIconBlack,
 	tikTokIconBlack,
 	whatsappIconGreen,
@@ -19,7 +19,9 @@ export const profile = {
 	username: 'K1ngHandy',
 	location: 'Downingtown, PA 🇺🇸',
 	logo: logoLight,
+	banner: banner,
 	alt: 'K1ngHandy Logo',
+	bannerAlt: 'Flower of life banner with elemental lion coin',
 };
 
 const username = profile.username;
@@ -27,7 +29,7 @@ const username = profile.username;
 const linksData = [
 	{
 		id: 'music',
-		icon: musicIcon,
+		icon: logoLight,
 		name: 'Phrasing',
 		alt: 'K1ngHandy - Phrasing',
 		url: 'https://www.youtube.com/watch?v=O2GVLF2Ygjs',

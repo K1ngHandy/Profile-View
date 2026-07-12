@@ -2,20 +2,19 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Music.css';
 
-function Music(props) {
-	const {
-		id,
-		onMouseOver,
-		onMouseOut,
-		onFocus,
-		onClick,
-		active,
-		username,
-		icon,
-		name,
-		alt,
-		url,
-	} = props;
+function Music({
+	id,
+	onMouseOver,
+	onMouseOut,
+	onFocus,
+	onClick,
+	active,
+	username,
+	icon,
+	name,
+	alt,
+	url,
+}) {
 	const [showPreview, setShowPreview] = useState(false);
 	const [previewPosition, setPreviewPosition] = useState({ x: 0, y: 0 });
 	const [previewError, setPreviewError] = useState(false);
@@ -82,7 +81,7 @@ function Music(props) {
 				<img
 					className="music-icon"
 					src={icon}
-					alt={alt}
+					alt={alt || 'Music icon'}
 				/>
 				<h3>🎶{name}</h3>
 			</button>
@@ -104,7 +103,7 @@ function Music(props) {
 					{previewError ? (
 						<img
 							src={icon}
-							alt={alt}
+							alt={alt || 'Music icon'}
 							className="preview-image fallback"
 						/>
 					) : (

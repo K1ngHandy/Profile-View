@@ -46,7 +46,7 @@ body.dark-mode .music-container {
 }
 body.dark-mode .music-container:hover {
     color: #fff;
-    background-color: steelblue;
+    background-color: #2b5d87;
     box-shadow: -3px 3px 3px #333;
     border-top: solid 1px #333;
     border-right: solid 1px #333;
@@ -63,6 +63,9 @@ body.dark-mode .music-container:hover {
 }
 .music-container:hover .music-icon {
     transform: scale(1.08);
+    filter: drop-shadow(0 0 8px lightsteelblue);
+    animation: horizontalFlip 0.6s;
+    animation-iteration-count: 0.5;
 }
 
 .music-container h3 {
@@ -100,4 +103,16 @@ body.dark-mode .music-container:hover {
     margin: 8px 0 0;
     font-size: 15px;
     color: #330033;
+}
+
+@keyframes horizontalFlip {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(-1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }

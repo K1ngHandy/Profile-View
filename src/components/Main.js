@@ -83,7 +83,7 @@ function Main({ profile, linksData, active, setActive }) {
 					onMouseOut={handleMouseOut}
 					onClick={handleClick}
 					active={active === 'music'}
-					username={musicLink?.username}
+					username={profile.username}
 					icon={musicLink?.icon}
 					name={musicLink?.name}
 					alt={musicLink?.alt}
