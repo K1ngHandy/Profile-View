@@ -1,17 +1,14 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
-import axios from 'axios';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
-// Mock data
-const mockProfileData = {
-	name: 'Test User',
-};
-
-// Mock axios module
-jest.mock('axios', () => ({
-	get: jest.fn(),
-}));
+// Gravatar API test data and Axios mock retained for reference while the
+// integration is disabled.
+// import axios from 'axios';
+// const mockProfileData = { name: 'Test User' };
+// jest.mock('axios', () => ({
+// 	get: jest.fn(),
+// }));
 
 jest.mock(
 	'@vercel/speed-insights/react',
@@ -20,7 +17,7 @@ jest.mock(
 			return null;
 		},
 	}),
-	{ virtual: true }
+	{ virtual: true },
 );
 
 describe('App component', () => {
@@ -43,35 +40,34 @@ describe('App component', () => {
 		});
 	});
 
-	test('renders initial loading state', async () => {
-		axios.get.mockImplementation(() => new Promise(() => {}));
-
+	test('renders the profile without the disabled Gravatar request', () => {
 		render(<App />);
-
-		expect(screen.getByText('Loading...')).toBeInTheDocument();
-	});
-
-	test('renders buttons when load is successful', async () => {
-		axios.get.mockResolvedValue({ data: mockProfileData });
-
-		render(<App />);
-
-		await waitFor(() => {
-			expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
-		});
 
 		expect(screen.getAllByRole('button')[0]).toBeInTheDocument();
 	});
 
-	test('renders error message when API fails', async () => {
-		axios.get.mockRejectedValue(new Error('API Error'));
-
-		render(<App />);
-
-		await waitFor(() => {
-			expect(
-				screen.getByText('API requests exceeded. Return later...')
-			).toBeInTheDocument();
-		});
-	});
+	// These tests belonged to the disabled Gravatar request and are retained
+	// here as documentation for any future re-enablement.
+	// test('renders initial loading state', async () => {
+	// 	axios.get.mockImplementation(() => new Promise(() => {}));
+	// 	render(<App />);
+	// 	expect(screen.getByText('Loading...')).toBeInTheDocument();
+	// });
+	// test('renders buttons when load is successful', async () => {
+	// 	axios.get.mockResolvedValue({ data: mockProfileData });
+	// 	render(<App />);
+	// 	await waitFor(() => {
+	// 		expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
+	// 	});
+	// 	expect(screen.getAllByRole('button')[0]).toBeInTheDocument();
+	// });
+	// test('renders error message when API fails', async () => {
+	// 	axios.get.mockRejectedValue(new Error('API Error'));
+	// 	render(<App />);
+	// 	await waitFor(() => {
+	// 		expect(
+	// 			screen.getByText('API requests exceeded. Return later...')
+	// 		).toBeInTheDocument();
+	// 	});
+	// });
 });

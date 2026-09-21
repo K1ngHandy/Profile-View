@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from './components/Header.js';
 import Main from './components/Main.js';
@@ -10,15 +10,16 @@ import linksData, { profile } from './data/linksData.js';
 import './styles/App.css';
 
 function App() {
-	const [data, setData] = useState([]);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState('');
+	// Gravatar state retained for reference while the integration is disabled.
+	// const [data, setData] = useState([]);
+	// const [loading, setLoading] = useState(true);
+	// const [error, setError] = useState('');
 	const [active, setActive] = useState(false);
 
-	const { username } = profile;
+	// const { username } = profile; // Used by the disabled Gravatar URL below.
 
-	// Gravatar integration
-	const gravatar = `https://api.gravatar.com/v3/profiles/${username}`;
+	// // Gravatar integration
+	// const gravatar = `https://api.gravatar.com/v3/profiles/${username}`;
 	const handleMouseOver = (id) => setActive(id);
 	const handleMouseOut = () => setActive(null);
 
@@ -26,20 +27,20 @@ function App() {
 	const [footerVisible, setFooterVisible] = useState(false);
 	const [lastScrollY, setLastScrollY] = useState(0);
 
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const res = await axios.get(gravatar);
-				setData(res.data);
-				setLoading(false);
-			} catch (err) {
-				console.error('Error fetching gravatar profile', err);
-				setError('API requests exceeded. Return later...');
-				setLoading(false);
-			}
-		};
-		fetchData();
-	}, [gravatar]);
+	// useEffect(() => {
+	// 	const fetchData = async () => {
+	// 		try {
+	// 			const res = await axios.get(gravatar);
+	// 			setData(res.data);
+	// 			setLoading(false);
+	// 		} catch (err) {
+	// 			console.error('Error fetching gravatar profile', err);
+	// 			setError('API requests exceeded. Return later...');
+	// 			setLoading(false);
+	// 		}
+	// 	};
+	// 	fetchData();
+	// }, [gravatar]);
 
 	useEffect(() => {
 		const scrollThreshold = window.scrollY;
@@ -61,15 +62,16 @@ function App() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, [lastScrollY]);
 
-	if (loading) return <div>Loading...</div>;
-	if (error) return <div className="error">{error}</div>;
+	// These guards belonged to the disabled Gravatar request.
+	// if (loading) return <div>Loading...</div>;
+	// if (error) return <div className="error">{error}</div>;
 
 	return (
 		<ThemeProvider>
 			<div className={`App ${footerVisible ? 'footer-visible' : ''}`}>
+				{/* data={data} // Gravatar profile data, retained for re-enablement. */}
 				<Header
 					profile={profile}
-					data={data}
 					active={active}
 					setActive={setActive}
 				/>

@@ -9,7 +9,7 @@ A modern, responsive personal profile dashboard built with React. Display your s
 ## ✨ Features
 
 - 🌓 **Dark/Light Mode Toggle** - Seamless theme switching
-- 👤 **Dynamic Profile Integration** - Fetches profile data from Gravatar API
+<!-- - 👤 **Dynamic Profile Integration** - Fetches profile data from Gravatar API -->
 - 🎵 **Featured Music Link** - Showcase your latest track
 - 🔗 **Social Media Grid** - Organized display of all your social platforms
 - 📱 **Responsive Design** - Works perfectly on desktop and mobile
@@ -96,8 +96,8 @@ const linksData = [
 ];
 ```
 
-### Updating Profile Info
-Change the `username` in `src/data/linksData.js` to your Gravatar username.
+<!-- ### Updating Profile Info
+Change the `username` in `src/data/linksData.js` to your Gravatar username. -->
 
 ### Theme Customization
 Modify CSS custom properties in `src/styles/App.css` to change colors, fonts, and spacing.
@@ -149,7 +149,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Icons provided by various social media platforms
-- Gravatar API for profile integration
+<!-- - Gravatar API for profile integration -->
 - React community for excellent documentation
 - Vercel for hosting and analytics
 
