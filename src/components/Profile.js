@@ -15,7 +15,7 @@ function Profile(props) {
 					/>
 				))}
 			</aside>
-			<div className="profile-main-content">
+			<section className="profile-main-content">
 				<section className="profile profile-intro">
 					<p>
 						Full Stack web developer with a solid foundation in Git,
@@ -56,7 +56,7 @@ function Profile(props) {
 						</div>
 					</div>
 				</section>
-			</div>
+			</section>
 			<aside className="profile-grid-column right">
 				{rightGridItems.map((item, idx) => (
 					<GridItem
