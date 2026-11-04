@@ -1,20 +1,20 @@
-import React from 'react';
-import GridItem from './GridItem.js';
-import '../styles/Profile.css';
+import React from "react";
+import GridItem from "./GridItem.js";
+import "../styles/Profile.css";
 
 function Profile(props) {
 	const { wcupa, bloom, leftGridItems, rightGridItems } = props;
 
 	return (
 		<div className="profile-container-grid">
-			<div className="profile-grid-column left">
+			<aside className="profile-grid-column left">
 				{leftGridItems.map((item, idx) => (
 					<GridItem
 						key={idx}
 						{...item}
 					/>
 				))}
-			</div>
+			</aside>
 			<div className="profile-main-content">
 				<section className="profile profile-intro">
 					<p>
@@ -57,14 +57,14 @@ function Profile(props) {
 					</div>
 				</section>
 			</div>
-			<div className="profile-grid-column right">
+			<aside className="profile-grid-column right">
 				{rightGridItems.map((item, idx) => (
 					<GridItem
 						key={idx}
 						{...item}
 					/>
 				))}
-			</div>
+			</aside>
 		</div>
 	);
 }
