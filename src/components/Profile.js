@@ -16,44 +16,42 @@ function Profile(props) {
 				))}
 			</aside>
 			<section className="profile-section">
-				<section className="profile-intro">
+				<section className="intro">
+					<h3>Computer Science major</h3>
 					<p>
-						Full Stack web developer with a solid foundation in Git,
-						HTML, CSS, Java, JavaScript, Python, React, Swift,
-						Node.js, Material UI, and other modern UI frameworks.
+						Full Stack web and data science developer with a solid
+						foundation in Git, HTML, CSS, Java, JavaScript, Python,
+						React, Swift, Node.js, Material UI, and other modern UI
+						frameworks.
 					</p>
 				</section>
-				<section className="profile-education">
-					<h3>Currently advancing expertise with:</h3>
-					<section className="education-row">
-						<div className="education-section">
-							<h4>Computer Science at</h4>
-							<a
-								href={wcupa?.url}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img
-									src={wcupa?.icon}
-									id="wcupa-icon"
-									alt={wcupa?.alt}
-								/>
-							</a>
-						</div>
-						<div className="education-section">
-							<h4>Full Stack Web Development at</h4>
-							<a
-								href="https://www.bloomtech.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img
-									src={bloom?.icon}
-									id="bloom-icon"
-									alt={bloom?.alt}
-								/>
-							</a>
-						</div>
+				<section className="education">
+					<h3>Education:</h3>
+					<section className="schools">
+						<a
+							className="school"
+							href={wcupa?.url}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={wcupa?.icon}
+								id="wcupa-icon"
+								alt={wcupa?.alt}
+							/>
+						</a>
+						<a
+							className="school"
+							href="https://www.bloomtech.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={bloom?.icon}
+								id="bloom-icon"
+								alt={bloom?.alt}
+							/>
+						</a>
 					</section>
 				</section>
 			</section>
