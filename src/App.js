@@ -68,7 +68,7 @@ function App() {
 
 	return (
 		<ThemeProvider>
-			<div className={`App ${footerVisible ? 'footer-visible' : ''}`}>
+			<div className={`app ${footerVisible ? 'footer-visible' : ''}`}>
 				{/* data={data} // Gravatar profile data, retained for re-enablement. */}
 				<Header
 					profile={profile}

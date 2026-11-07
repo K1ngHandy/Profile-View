@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Profile from './Profile.js';
 import Divider from './Divider.js';
 import Music from './Music.js';
+import Title from './Title.js';
 import '../styles/Main.css';
 
 function Main({ profile, linksData, active, setActive }) {
@@ -41,26 +42,7 @@ function Main({ profile, linksData, active, setActive }) {
 
 	return (
 		<main className="main">
-			<section className="title">
-				<h2>Steve Handy</h2>
-				<button
-					type="button"
-					className="main-location"
-					id={profile.id || undefined}
-					style={{ cursor: 'pointer' }}
-					onClick={() =>
-						window.open(
-							`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-								profile.location,
-							)}`,
-							'_blank',
-							'noopener,noreferrer',
-						)
-					}
-				>
-					🧭 {profile.location}
-				</button>
-			</section>
+			<Title id={profile.id} location={profile.location} />
 			<Divider />
 			<Profile
 				id={profile.id}
@@ -76,21 +58,18 @@ function Main({ profile, linksData, active, setActive }) {
 				rightGridItems={rightGridItems}
 			/>
 			<Divider />
-			<section className="music">
-				<Music
-					id={profile.id}
-					onMouseOver={() => handleMouseOver('music')}
-					onMouseOut={handleMouseOut}
-					onClick={handleClick}
-					active={active === 'music'}
-					username={profile.username}
-					icon={musicLink?.icon}
-					name={musicLink?.name}
-					alt={musicLink?.alt}
-					url={musicLink?.url}
-				/>
-				<div className="main-bottom-spacer" />
-			</section>
+			<Music
+				id={profile.id}
+				onMouseOver={() => handleMouseOver}
+				onMouseOut={handleMouseOut}
+				onClick={handleClick}
+				active={active === 'music'}
+				username={profile.username}
+				icon={musicLink?.icon}
+				name={musicLink?.name}
+				alt={musicLink?.alt}
+				url={musicLink?.url}
+			/>
 			<section className="spacer" />
 		</main>
 	);

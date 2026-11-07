@@ -1,0 +1,38 @@
+.title {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.title h2 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.title .location {
+    width: auto;
+    padding: 3px 6px;
+    border-radius: 9px;
+    box-shadow: -1px 1px 1px var(--accent-light);
+}
+
+.location:hover {
+    background-color: var(--accent-light);
+    color: var(--text);
+    box-shadow: var(--shadow-primary-hover);
+}
+
+body.dark-mode .location {
+    background-color: var(--accent-light);
+    color: var(--text);
+    box-shadow: -1px 1px 2px var(--primary);
+}
+
+body.dark-mode .location:hover {
+    background-color: var(--accent);
+    color: var(--text);
+    box-shadow: var(--shadow-primary-hover);
+}

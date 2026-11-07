@@ -6,7 +6,7 @@ function Profile(props) {
 	const { wcupa, bloom, leftGridItems, rightGridItems } = props;
 
 	return (
-		<div className="profile-container">
+		<div className="profile">
 			<aside className="left">
 				{leftGridItems.map((item, idx) => (
 					<GridItem
@@ -15,7 +15,7 @@ function Profile(props) {
 					/>
 				))}
 			</aside>
-			<section className="profile">
+			<section className="profile-section">
 				<section className="profile-intro">
 					<p>
 						Full Stack web developer with a solid foundation in Git,
