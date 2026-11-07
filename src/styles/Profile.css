@@ -1,82 +1,79 @@
 .profile {
-    width: 75%;
-    margin: auto;
+    margin: 1em 1.5em;
 }
 
-.profile-container-grid {
-    display: grid;
-    grid-template-columns: 1fr 2.5fr 1fr;
-    align-items: start;
-    margin: auto;
-    padding: 21px 33px;
-    background-color: lightsteelblue;
+.profile-container {
+    display: flex;
+    padding: 1.5em 1.2em;
+    background-color: var(--accent-light);
     width: 100%;
     max-width: 90vw;
     border-radius: 33px;
-    box-shadow: -1px 2px 2px #330033;
+    box-shadow: var(--shadow-surface);
     box-sizing: border-box;
 }
 
-.profile-grid-column {
+aside {
     display: flex;
     flex-direction: column;
+    flex-basis: 15%;
     gap: 1.5rem;
     align-items: center;
     justify-content: flex-start;
 }
-.profile-grid-column.left {
+
+aside.left {
     grid-column: 1;
 }
-.profile-main-content {
+
+section {
+    flex-basis: 75%;
     grid-column: 2;
 }
-.profile-grid-column.right {
+
+aside.right {
     grid-column: 3;
 }
 
-.wcupa-icon {
+#wcupa-icon {
     height: 80px;
     width: 120px;
-    box-shadow: -1px 1px 2px #333;
-    border: 1px solid #333;
+    box-shadow: -1px 1px 2px var(--neutral-dark);
+    border: 1px solid var(--neutral-dark);
     border-radius: 12px;
 }
 
-.wcupa-icon:hover {
-    border: 1px solid lightslategray;
-    box-shadow: -2px 3px 3px steelblue;
+#wcupa-icon:hover {
+    border-color: var(--gray-light-slate);
 }
 
-.bloom-icon {
+#bloom-icon {
     height: 34px;
     width: 135px;
     padding: 12px;
-    background-color: #f0f0f0;
-    box-shadow: -1px 1px 2px #333;
-    border: 1px solid slategray;
+    background-color: var(--surface);
+    box-shadow: -1px 1px 2px var(--neutral-dark);
+    border: 1px solid var(--gray-slate);
     border-radius: 12px;
 }
 
-.bloom-icon:hover {
-    background-color: lightgray;
-    box-shadow: -2px 3px 3px steelblue;
-    border: 1px solid lightslategray;
+#bloom-icon:hover {
+    background-color: var(--surface-muted);
+    border-color: var(--gray-light-slate);
 }
 
-body.dark-mode .bloom-icon {
-    background-color: lightgray;
-    color: #131313;
-    box-shadow: -1px 1px 2px #330033;
+body.dark-mode #bloom-icon {
+    background-color: var(--surface-muted);
+    box-shadow: -1px 1px 2px var(--primary);
 }
 
-body.dark-mode .bloom-icon:hover {
-    background-color: steelblue;
-    color: #131313;
-    box-shadow: -3px 3px 6px #330033;
+body.dark-mode #bloom-icon:hover {
+    background-color: var(--accent);
+    box-shadow: var(--shadow-primary-hover);
 }
 
 @media (max-width: 900px) {
-    .profile-container-grid {
+    .profile-container {
         grid-template-columns: 1fr 3fr 1fr;
         gap: 1rem;
         padding: 12px 6vw;
@@ -88,7 +85,7 @@ body.dark-mode .bloom-icon:hover {
 }
 
 @media (max-width: 600px) {
-    .profile-container-grid {
+    .profile-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -96,7 +93,7 @@ body.dark-mode .bloom-icon:hover {
         gap: 0.5rem;
     }
 
-    .profile-grid-column {
+    aside {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -104,7 +101,7 @@ body.dark-mode .bloom-icon:hover {
         margin-bottom: 1rem;
     }
 
-    .profile-main-content {
+    section {
         width: 100%;
     }
 }

@@ -3,16 +3,16 @@
     bottom: 5rem;
     right: 1.5rem;
     z-index: 200;
-    background-color: #440044;
-    color: lightsteelblue;
-    border: solid 1px lightgray;
+    background-color: var(--primary-dark);
+    color: var(--text-muted);
+    border: solid 1px var(--surface-muted);
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
     font-size: 1.8rem;
     line-height: 1;
     cursor: pointer;
-    box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: -3px 3px 6px var(--shadow-heavy);
     transition: background-color 0.2s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
@@ -20,6 +20,14 @@
 }
 
 .scroll-to-top:hover {
-    background-color: #330033;
+    background-color: var(--primary);
     transform: scale(1.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-to-top,
+    .scroll-to-top:hover {
+        transition: none;
+        transform: none;
+    }
 }

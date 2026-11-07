@@ -4,62 +4,51 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 93%;
-    padding: 20px;
-    box-sizing: border-box;
-
-}
-
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
     width: 75vw;
+    box-sizing: border-box;
 }
 
-.main-profile-title {
+.title {
     position: relative;
     z-index: 1;
-    margin: 0 0 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6px;
+
+    h2 {
+        font-size: 1.8em;
+        margin: 0;
+    }
 }
 
-.main-profile-title h2 {
-    font-size: 1.8rem;
-    color: #330033;
-    margin: 0;
-}
-
-.main-location {
+.title .main-location {
     width: auto;
     padding: 3px 6px;
     border-radius: 9px;
-    box-shadow: -1px 1px 1px lightsteelblue;
+    box-shadow: -1px 1px 1px var(--accent-light);
 }
 
 .main-location:hover {
-    background-color: lightsteelblue;
-    color: #131313;
-    box-shadow: -3px 3px 6px #330033;
+    background-color: var(--accent-light);
+    color: var(--text);
+    box-shadow: var(--shadow-primary-hover);
 }
 
 body.dark-mode .main-location {
-    background-color: lightsteelblue;
-    color: #131313;
-    box-shadow: -1px 1px 2px #330033;
+    background-color: var(--accent-light);
+    color: var(--text);
+    box-shadow: -1px 1px 2px var(--primary);
 }
 
 body.dark-mode .main-location:hover {
-    background-color: steelblue;
-    color: #131313;
-    box-shadow: -3px 3px 6px #330033;
+    background-color: var(--accent);
+    color: var(--text);
+    box-shadow: var(--shadow-primary-hover);
 }
 
-.main-music {
+.music {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -68,18 +57,18 @@ body.dark-mode .main-location:hover {
     text-align: center;
 }
 
-.section-spacer {
+.spacer {
     height: 15vh;
 }
 
 @media (max-width: 900px) {
-    .main-container {
+    main {
         width: 93vw;
     }
 }
 
 @media (max-width: 600px) {
-    .main-container {
+    main {
         width: 87vw;
     }
 }

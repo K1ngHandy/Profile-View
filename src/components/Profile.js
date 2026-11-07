@@ -6,8 +6,8 @@ function Profile(props) {
 	const { wcupa, bloom, leftGridItems, rightGridItems } = props;
 
 	return (
-		<div className="profile-container-grid">
-			<aside className="profile-grid-column left">
+		<div className="profile-container">
+			<aside className="left">
 				{leftGridItems.map((item, idx) => (
 					<GridItem
 						key={idx}
@@ -15,17 +15,17 @@ function Profile(props) {
 					/>
 				))}
 			</aside>
-			<section className="profile-main-content">
-				<section className="profile profile-intro">
+			<section className="profile">
+				<section className="profile-intro">
 					<p>
 						Full Stack web developer with a solid foundation in Git,
 						HTML, CSS, Java, JavaScript, Python, React, Swift,
 						Node.js, Material UI, and other modern UI frameworks.
 					</p>
 				</section>
-				<section className="profile profile-education">
+				<section className="profile-education">
 					<h3>Currently advancing expertise with:</h3>
-					<div className="education-row">
+					<section className="education-row">
 						<div className="education-section">
 							<h4>Computer Science at</h4>
 							<a
@@ -35,7 +35,7 @@ function Profile(props) {
 							>
 								<img
 									src={wcupa?.icon}
-									className="wcupa-icon"
+									id="wcupa-icon"
 									alt={wcupa?.alt}
 								/>
 							</a>
@@ -49,15 +49,15 @@ function Profile(props) {
 							>
 								<img
 									src={bloom?.icon}
-									className="bloom-icon"
+									id="bloom-icon"
 									alt={bloom?.alt}
 								/>
 							</a>
 						</div>
-					</div>
+					</section>
 				</section>
 			</section>
-			<aside className="profile-grid-column right">
+			<aside className="right">
 				{rightGridItems.map((item, idx) => (
 					<GridItem
 						key={idx}

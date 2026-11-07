@@ -40,8 +40,8 @@ function Main({ profile, linksData, active, setActive }) {
 	}));
 
 	return (
-		<div className="main-container">
-			<div className="main-profile-title">
+		<main className="main">
+			<section className="title">
 				<h2>Steve Handy</h2>
 				<button
 					type="button"
@@ -60,7 +60,7 @@ function Main({ profile, linksData, active, setActive }) {
 				>
 					🧭 {profile.location}
 				</button>
-			</div>
+			</section>
 			<Divider />
 			<Profile
 				id={profile.id}
@@ -76,7 +76,7 @@ function Main({ profile, linksData, active, setActive }) {
 				rightGridItems={rightGridItems}
 			/>
 			<Divider />
-			<section className="main-music">
+			<section className="music">
 				<Music
 					id={profile.id}
 					onMouseOver={() => handleMouseOver('music')}
@@ -91,8 +91,8 @@ function Main({ profile, linksData, active, setActive }) {
 				/>
 				<div className="main-bottom-spacer" />
 			</section>
-			<section className="section-spacer" />
-		</div>
+			<section className="spacer" />
+		</main>
 	);
 }
 

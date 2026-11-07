@@ -1,4 +1,37 @@
-html, body, #root {
+:root {
+  --primary: #330033;
+  --primary-dark: #440044;
+  --accent: steelblue;
+  --accent-light: lightsteelblue;
+  --surface: #f0f0f0;
+  --surface-muted: lightgray;
+  --border: #031325;
+  --text: #131313;
+  --text-light: #f0f0f0;
+  --text-muted: lightsteelblue;
+  --gray: gray;
+  --gray-slate: slategray;
+  --gray-light-slate: lightslategray;
+  --neutral-dark: #333;
+  --neutral-darker: #222222;
+  --neutral-darkest: #121212;
+  --neutral-black: #111;
+  --white: #fff;
+  --accent-dark: #2b5d87;
+  --danger: crimson;
+  --overlay-primary: rgba(51, 0, 51, 0.1);
+  --shadow-light: rgba(0, 0, 0, 0.2);
+  --shadow-medium: rgba(0, 0, 0, 0.3);
+  --shadow-heavy: rgba(0, 0, 0, 0.4);
+  --shadow-surface: -1px 2px 2px var(--primary);
+  --shadow-tooltip: -3px 3px 3px var(--shadow-medium);
+  --shadow-hover: -2px 3px 3px var(--accent);
+  --shadow-primary-hover: -3px 3px 6px var(--primary);
+}
+
+html,
+body,
+#root {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -15,6 +48,24 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.date-display,
+.link .active-text,
+.grid-item .active-text {
+  border: 1px solid var(--surface-muted);
+  box-shadow: var(--shadow-tooltip);
+}
+
+.grid-item:hover,
+#wcupa-icon:hover,
+.bloom-icon:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+#wcupa-icon:hover,
+.bloom-icon:hover {
+  border-color: var(--gray-light-slate);
 }
 
 code {
