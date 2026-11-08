@@ -59,13 +59,9 @@ body {
 
 .grid-item:hover,
 #wcupa-icon:hover,
-.bloom-icon:hover {
+#bloom-icon:hover,
+#auto-icon:hover {
   box-shadow: var(--shadow-hover);
-}
-
-#wcupa-icon:hover,
-.bloom-icon:hover {
-  border-color: var(--gray-light-slate);
 }
 
 code {

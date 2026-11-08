@@ -12,6 +12,7 @@ import youtubeIcon from './youtube-icon.png';
 import blueskyIconBlue from './bluesky-icon-blue.png';
 import wcupaIcon from './wcupa-logo.png';
 import bloomIcon from './bloom-logo.png';
+import autoTrainingIcon from './atc-logo.png'
 
 export {
 	logoLight,
@@ -28,4 +29,5 @@ export {
 	blueskyIconBlue,
 	wcupaIcon,
 	bloomIcon,
+	autoTrainingIcon,
 };

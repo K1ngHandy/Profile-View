@@ -1,20 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Profile from './Profile.js';
-import Divider from './Divider.js';
-import Music from './Music.js';
-import Title from './Title.js';
-import '../styles/Main.css';
+import React from "react";
+import PropTypes from "prop-types";
+import Profile from "./Profile.js";
+import Divider from "./Divider.js";
+import Music from "./Music.js";
+import Title from "./Title.js";
+import "../styles/Main.css";
 
 function Main({ profile, linksData, active, setActive }) {
 	const handleMouseOver = (id) => setActive(id);
 	const handleMouseOut = () => setActive(null);
 	const handleClick = (url) =>
-		window.open(url, '_blank', 'noopener,noreferrer');
+		window.open(url, "_blank", "noopener,noreferrer");
 
-	const musicLink = linksData.find((link) => link.id === 'music');
-	const wcupaLink = linksData.find((link) => link.id === 'wcupa');
-	const bloomLink = linksData.find((link) => link.id === 'bloom');
+	const autoLink = linksData.find((link) => link.id === "auto");
+	const bloomLink = linksData.find((link) => link.id === "bloom");
+	const musicLink = linksData.find((link) => link.id === "music");
+	const wcupaLink = linksData.find((link) => link.id === "wcupa");
 
 	const leftGridItems = linksData.slice(1, 5).map((link, idx) => ({
 		id: `button-${idx}`,
@@ -42,7 +43,10 @@ function Main({ profile, linksData, active, setActive }) {
 
 	return (
 		<main className="main">
-			<Title id={profile.id} location={profile.location} />
+			<Title
+				id={profile.id}
+				location={profile.location}
+			/>
 			<Divider />
 			<Profile
 				id={profile.id}
@@ -53,6 +57,7 @@ function Main({ profile, linksData, active, setActive }) {
 				username={profile.username}
 				wcupa={wcupaLink}
 				bloom={bloomLink}
+				auto={autoLink}
 				music={musicLink}
 				leftGridItems={leftGridItems}
 				rightGridItems={rightGridItems}
@@ -63,7 +68,7 @@ function Main({ profile, linksData, active, setActive }) {
 				onMouseOver={() => handleMouseOver}
 				onMouseOut={handleMouseOut}
 				onClick={handleClick}
-				active={active === 'music'}
+				active={active === "music"}
 				username={profile.username}
 				icon={musicLink?.icon}
 				name={musicLink?.name}
