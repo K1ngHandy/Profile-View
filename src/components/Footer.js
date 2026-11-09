@@ -41,7 +41,6 @@ function Footer({ active, onMouseOver, onMouseOut, visible }) {
 						</span>
 					)}
 				</a>
-				<br></br>
 				<span>
 					&nbsp;&copy;{new Date().getFullYear()}, All rights reserved.
 				</span>
